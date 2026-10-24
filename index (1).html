@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hopewell — Theme Documentation</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #E8870A;
+            --primary-light: #FFF7ED;
+            --secondary: #0F172A;
+            --bg: #FDFBF7;
+            --surface: #FFFFFF;
+            --text: #1C1917;
+            --text-muted: #6B5E4F;
+            --border: #E7DFD1;
+            --accent: #FEF3E4;
+            --ink: #1C1917;
+            --cream: #FDFBF7;
+            --gold: #E8870A;
+            --gold-soft: #FDE8C8;
+            --shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.03);
+            --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.05);
+            --font-display: 'Poppins', sans-serif;
+            --font-body: 'Nunito Sans', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* ── SIDEBAR ── */
+        .sidebar {
+            width: 280px;
+            background: var(--surface);
+            border-right: 1px solid var(--border);
+            padding: 36px 24px;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow);
+            z-index: 10;
+        }
+
+        .sidebar .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 32px;
+            text-decoration: none;
+        }
+
+        .sidebar .brand .icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #F59E0B, #E8870A);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .sidebar .brand .name {
+            font-family: var(--font-display);
+            font-size: 20px;
+            letter-spacing: -0.3px;
+            color: var(--text);
+            font-weight: 700;
+        }
+
+        .sidebar .brand .name .dot {
+            color: var(--primary);
+        }
+
+        .sidebar .nav-section {
+            margin-top: 4px;
+            margin-bottom: 2px;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--text-muted);
+            padding: 8px 12px 4px;
+            font-weight: 700;
+        }
+
+        .sidebar a {
+            display: block;
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-bottom: 4px;
+            font-size: 13.5px;
+            font-weight: 500;
+            padding: 7px 12px;
+            border-radius: 8px;
+            transition: 0.2s ease;
+        }
+
+        .sidebar a:hover {
+            background: var(--accent);
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* ── CONTENT ── */
+        .content {
+            flex: 1;
+            max-width: 960px;
+            padding: 56px 64px;
+            background: var(--surface);
+            box-shadow: -1px 0 10px rgba(0, 0, 0, 0.02);
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: var(--font-display);
+            color: var(--text);
+            margin-top: 0;
+        }
+
+        h1 {
+            font-size: 44px;
+            border-bottom: 2px solid var(--primary);
+            display: inline-block;
+            padding-bottom: 12px;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 30px;
+            margin-top: 56px;
+            margin-bottom: 20px;
+            color: var(--secondary);
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 22px;
+            margin-top: 36px;
+            margin-bottom: 12px;
+            color: #3d3528;
+            font-weight: 600;
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .code {
+            background: #1a1814;
+            color: #eddccc;
+            padding: 20px 24px;
+            border-radius: 14px;
+            overflow-x: auto;
+            font-family: 'SF Mono', 'Cascadia Code', 'Courier New', monospace;
+            font-size: 13.5px;
+            white-space: pre-wrap;
+            margin: 18px 0;
+            border: 1px solid #3a3028;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            line-height: 1.6;
+        }
+
+        .note {
+            background: var(--primary-light);
+            border-left: 5px solid var(--primary);
+            padding: 18px 22px;
+            border-radius: 12px;
+            margin-top: 18px;
+            font-weight: 500;
+            color: #5C3A0E;
+            font-size: 14px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--text);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-left: 8px;
+            border: 1px solid var(--border);
+            font-family: var(--font-body);
+        }
+
+        ul {
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        a {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 40px 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .feature-card {
+            background: var(--bg);
+            padding: 20px;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-card);
+        }
+
+        .feature-card h4 {
+            font-family: var(--font-display);
+            font-size: 20px;
+            margin: 0 0 8px;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .page-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .page-chip {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 14px 16px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .page-chip .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .page-chip span {
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        @media(max-width:768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+                padding: 24px;
+            }
+            .content {
+                padding: 32px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="brand">
+                <span class="icon">♥</span>
+                <span class="name">Hope<span class="dot">well</span> Docs</span>
+            </div>
+            <div class="nav-section">Overview</div>
+            <a href="#intro">Introduction</a>
+            <a href="#installation">Installation</a>
+            <a href="#structure">Folder Structure</a>
+            <a href="#tech">Tech Stack</a>
+            <div class="nav-section">Layout</div>
+            <a href="#sections">Sections &amp; Layout</a>
+            <a href="#features">Key Features</a>
+            <div class="nav-section">Customize</div>
+            <a href="#customize">Colors &amp; Typography</a>
+            <a href="#images">Images &amp; Assets</a>
+            <a href="#forms">Forms &amp; Interactions</a>
+            <div class="nav-section">Reference</div>
+            <a href="#faq">FAQ &amp; Support</a>
+            <a href="#credits">Credits</a>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+
+            <!-- Intro -->
+            <section id="intro" class="section">
+                <h1>Hopewell<br>Transparent Charity &amp; Donation HTML Template</h1>
+                <p>
+                    Thank you for choosing <strong>Hopewell</strong> — a complete, thoughtfully designed HTML template built for charity organizations, non‑profits, fundraising platforms, and community foundations. Rooted in the belief that generosity works best when it's traceable, Hopewell blends a warm amber-and-deep-navy palette with approachable typography, soft blobs, glowing gradients, and a preloader that sets a tone of hope and trust.
+                </p>
+                <p>
+                    Hopewell is a <strong>single‑page, multi‑section template</strong> with 12 distinct content zones: a hero with floating stat cards, animated impact counters, an about collage, six active donation campaigns with progress bars, a why‑choose‑us grid, a three‑step how‑it‑works flow, volunteer profiles with hover overlays, a testimonial carousel, a full‑width CTA banner, a contact section with form and map placeholder, and a comprehensive footer with newsletter signup. A sticky mobile donate bar, a scroll‑to‑top button with SVG progress ring, and a video story modal round out the interactive experience.
+                </p>
+                <p><strong>Version:</strong> 1.0 &nbsp;|&nbsp; <strong>Last Updated:</strong> August 2026</p>
+            </section>
+
+            <!-- Installation -->
+            <section id="installation" class="section">
+                <h2>🚀 Installation</h2>
+                <p>
+                    Hopewell uses plain HTML, Bootstrap 5, the AOS animation library, Bootstrap Icons, and vanilla JavaScript. No build tools, npm, or package managers are required — just unzip and open.
+                </p>
+                <div class="code">1. Download and unzip the purchased package.
+                    2. Open the project folder.
+                    3. Double‑click <strong>index.html</strong> to preview in your browser.
+                4. For editing, we recommend <strong>VS Code</strong> with the Live Server extension.</div>
+                <div class="note">
+                    <strong>Quick Start:</strong> Just open <code>index.html</code> and start editing. All dependencies (Bootstrap, Bootstrap Icons, AOS, Google Fonts) load from CDNs — no command line needed. The local assets folder contains minified Bootstrap files, the custom stylesheet, and the JavaScript file.
+                </div>
+            </section>
+
+            <!-- Structure -->
+            <section id="structure" class="section">
+                <h2>📁 Folder Structure</h2>
+                <pre class="code">/hopewell-theme
+                    ├── index.html (Main single‑page site)
+                    │
+                    ├── assets/
+                    │ ├── bootstrap.min.css (Bootstrap 5 — local fallback)
+                    │ ├── bootstrap.bundle.min.js (Bootstrap JS bundle — local)
+                    │ ├── style.css (All custom styles, components &amp; animations)
+                    │ ├── script.js (Interactions, counters, preloader, scroll‑to‑top, form)
+                    │ └── hand-heart.png (Favicon)
+                    │
+                    └── (All campaign &amp; volunteer images load from Unsplash CDN —
+                    replace with your own photography)</pre>
+                <p class="note">Images throughout the template are served from Unsplash CDN as placeholders. Swap them with your own photos by updating the <code>src</code> attributes in the HTML. The favicon (<code>hand-heart.png</code>) sits in the assets folder — replace it with your organization's icon.</p>
+            </section>
+
+            <!-- Tech -->
+            <section id="tech" class="section">
+                <h2>⚙️ Tech Stack</h2>
+                <ul>
+                    <li><strong>HTML5</strong> — semantic, accessible, single‑page markup with anchor navigation</li>
+                    <li><strong>Bootstrap 5</strong> — grid system, navbar collapse, carousel, modal, and utility classes</li>
+                    <li><strong>Bootstrap Icons</strong> — extensive icon library (heart, shield, eye, geo, envelope, etc.) loaded from CDN</li>
+                    <li><strong>CSS Custom Properties</strong> — global color, font, and spacing theming via <code>:root</code> in <code>style.css</code></li>
+                    <li><strong>Vanilla JavaScript</strong> — preloader, counter animation, scroll‑to‑top with SVG ring progress, contact form handling, AOS initialization, mobile donate bar visibility</li>
+                    <li><strong>AOS (Animate on Scroll)</strong> — scroll‑triggered fade, slide, and zoom reveals</li>
+                    <li><strong>Google Fonts</strong> — Poppins (display/headings) + Nunito Sans (body)</li>
+                </ul>
+                <div class="code">
+                    &lt;link href="assets/bootstrap.min.css" rel="stylesheet"&gt;
+                    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"&gt;
+                    &lt;link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"&gt;
+                    &lt;link href="assets/style.css" rel="stylesheet" /&gt;
+                    &lt;script src="assets/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+                    &lt;script src="https://unpkg.com/aos@2.3.1/dist/aos.js"&gt;&lt;/script&gt;
+                &lt;script src="assets/script.js"&gt;&lt;/script&gt;</div>
+                <div class="note">
+                    The custom stylesheet <code>assets/style.css</code> contains all themed components: <code>.btn-hw-primary</code>, <code>.btn-hw-outline</code>, <code>.cause-card</code>, <code>.vol-card</code>, <code>.testi-card</code>, <code>.stats-band</code>, <code>.hero-glow</code>, <code>.blob</code> shapes, and the preloader animation. Interactive scripts live in <code>assets/script.js</code>.
+                </div>
+            </section>
+
+            <!-- Sections -->
+            <section id="sections" class="section">
+                <h2>📄 Sections &amp; Layout</h2>
+                <p>Hopewell is a <strong>single‑page design</strong> with twelve distinct sections, all navigable via the sticky navbar. Each section has a unique <code>id</code> for smooth anchor scrolling.</p>
+
+                <div class="page-grid">
+                    <div class="page-chip"><span class="dot"></span><span>Preloader</span></div>
+                    <div class="page-chip"><span class="dot"></span><span>Navbar</span></div>
+                    <div class="page-chip"><span class="dot"></span><span>Hero</span></div>
+                    <div class="page-chip"><span class="dot"></span><span>Impact Stats</span></div>
+                    <div class="page-chip"><span class="dot"></span><span>About</span></div>
+                    <div class="page-chip"><span class="dot"></span><span>Causes (6)</span></div>
+                    <div class="page-chip"><span class="dot"></span><span>Why Choose Us</span></div>
+                    <div class="page-chip"><span class="dot"></span><span>How It Works</span></div>
+                    <div class="page-chip"><span class="dot"></span><span>Volunteers</span></div>
+                    <div class="page-chip"><span class="dot"></span><span>Testimonials</span></div>
+                    <div class="page-chip"><span class="dot"></span><span>CTA Banner</span></div>
+                    <div class="page-chip"><span class="dot"></span><span>Contact</span></div>
+                    <div class="page-chip"><span class="dot"></span><span>Footer</span></div>
+                </div>
+
+                <h3>Preloader <span class="tag">#preloader</span></h3>
+                <ul>
+                    <li>Animated ring with a pulsing heart icon and "LOADING HOPE…" text</li>
+                    <li>Fades out after page load via JavaScript — sets a warm, anticipatory tone</li>
+                </ul>
+
+                <h3>Navbar <span class="tag">#mainNav</span></h3>
+                <ul>
+                    <li>Sticky, glass‑effect navigation with the Hopewell heart logo</li>
+                    <li>Smooth‑scroll links: Home, About, Causes, Volunteers, Testimonials, Contact</li>
+                    <li>"Donate Now" CTA button visible on desktop; collapses to hamburger on mobile</li>
+                </ul>
+
+                <h3>Hero <span class="tag">#home</span></h3>
+                <ul>
+                    <li>Large headline with SVG underline accent on "someone's"</li>
+                    <li>Floating blob shapes for organic visual depth</li>
+                    <li>Two floating stat cards: "42,180 Meals served today" and "100% Verified &amp; secure"</li>
+                    <li>Donor avatar strip showing 12,600+ donors with real faces</li>
+                    <li>Dual CTAs: "Donate Now" (scrolls to causes) and "Watch Story" (opens modal)</li>
+                </ul>
+
+                <h3>Impact Stats <span class="tag">#impact</span></h3>
+                <ul>
+                    <li>Four‑column stat band with animated counters: Meals Served, Children Helped, Active Volunteers, Funds Raised</li>
+                    <li>Counters animate from zero to target using JavaScript on scroll</li>
+                </ul>
+
+                <h3>About <span class="tag">#about</span></h3>
+                <ul>
+                    <li>Two‑column layout: image collage (with 13‑year trust badge) + descriptive text</li>
+                    <li>Three value pillars with icons: Full Transparency, Verified NGO Partners, On‑the‑Ground Reach</li>
+                    <li>Wrapped in a soft contact‑card container for visual cohesion</li>
+                </ul>
+
+                <h3>Causes <span class="tag">#causes</span></h3>
+                <ul>
+                    <li>Six donation campaign cards in a 3×2 grid</li>
+                    <li>Categories: Nutrition, Clean Water, Education, Healthcare, Emergency Relief, Elder Care</li>
+                    <li>Each card includes: campaign image, category tag, title, description, progress bar (with <code>data-progress</code> attribute), raised/goal amounts, and a "Donate to this cause" button</li>
+                    <li>Progress bars animate to their target width on load</li>
+                </ul>
+
+                <h3>Why Choose Us <span class="tag">#why</span></h3>
+                <ul>
+                    <li>Six‑card grid with icons: Transparent Donations, Verified NGOs, Secure Payments, Real‑Time Impact, Tax Benefits, 24/7 Donor Support</li>
+                    <li>Each card has a soft hover effect and an icon circle</li>
+                </ul>
+
+                <h3>How It Works <span class="tag">#how</span></h3>
+                <ul>
+                    <li>Three‑step flow: Choose a Cause → Donate Securely → Track Your Impact</li>
+                    <li>Numbered circles connected by a horizontal line (visible on desktop)</li>
+                </ul>
+
+                <h3>Volunteers <span class="tag">#volunteers</span></h3>
+                <ul>
+                    <li>Four volunteer profile cards in a row</li>
+                    <li>Hover overlay reveals name, role, and social media icons</li>
+                    <li>Images from Unsplash and Magnific CDNs</li>
+                </ul>
+
+                <h3>Testimonials <span class="tag">#testimonials</span></h3>
+                <ul>
+                    <li>Bootstrap carousel with two slides, each containing testimonial cards</li>
+                    <li>Star ratings, quotes, person photos, names, and roles</li>
+                    <li>Carousel indicators for manual navigation</li>
+                    <li>Set against a warm gradient background section</li>
+                </ul>
+
+                <h3>CTA Banner <span class="tag">#cta</span></h3>
+                <ul>
+                    <li>Full‑width centered banner with heart icon, emotional headline, and "Donate Now" button</li>
+                    <li>Soft gradient background with border radius</li>
+                </ul>
+
+                <h3>Contact <span class="tag">#contact</span></h3>
+                <ul>
+                    <li>Two‑column layout: contact info (address, email, phone, map placeholder) + form</li>
+                    <li>Form fields: Full Name, Email, Subject, Message — with Bootstrap form controls</li>
+                    <li>Submit button with send icon; status feedback area for form submission</li>
+                </ul>
+
+                <h3>Footer <span class="tag">footer-hw</span></h3>
+                <ul>
+                    <li>Dark navy background with wave SVG transition from the section above</li>
+                    <li>Four‑column layout: brand + social + badges, Quick Links, Causes, Get In Touch + Newsletter</li>
+                    <li>Newsletter input with arrow submit button and anti‑spam note</li>
+                    <li>Footer bottom: copyright, legal links (Privacy, Terms, Financial Reports, FAQs), payment icons, and "Made with ♥" tagline</li>
+                </ul>
+
+                <h3>Additional UI Elements</h3>
+                <ul>
+                    <li><strong>Mobile Sticky Donate Bar</strong> — fixed bottom bar on small screens with a "Donate Now" button linking to #causes</li>
+                    <li><strong>Scroll‑to‑Top Button</strong> — circular button with SVG progress ring; appears after scrolling down; smooth scrolls to top on click</li>
+                    <li><strong>Watch Story Modal</strong> — Bootstrap modal with video placeholder image; triggered from the hero section</li>
+                </ul>
+            </section>
+
+            <!-- Features -->
+            <section id="features" class="section">
+                <h2>✨ Key Features</h2>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>💛 Warm Preloader</h4>
+                        <p>A pulsing heart inside a rotating ring with "LOADING HOPE…" text — sets an emotional, trustworthy tone before the page reveals itself.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🎨 Hopeful Design System</h4>
+                        <p>Amber-gold accents, deep navy footer, soft cream backgrounds, glowing gradients, and organic blob shapes convey warmth, trust, and compassion. All components use CSS custom properties for easy theming.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🧩 Reusable UI Components</h4>
+                        <p><code>.btn-hw-primary</code>, <code>.btn-hw-outline</code>, <code>.cause-card</code>, <code>.vol-card</code>, <code>.testi-card</code>, <code>.stats-band</code>, <code>.contact-card</code> — consistently styled across the entire page for a cohesive look.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🎬 AOS Scroll Animations</h4>
+                        <p>Elements fade, slide left/right, and zoom into view as the user scrolls — creating a gentle, engaging storytelling rhythm. Delays are staggered for cascading reveals.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📊 Animated Counters</h4>
+                        <p>Four impact stats (Meals Served, Children Helped, Active Volunteers, Funds Raised) animate from zero to their target numbers using a JavaScript counter function triggered on scroll.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📈 Campaign Progress Bars</h4>
+                        <p>Six donation campaigns feature animated progress bars that fill to their <code>data-progress</code> percentage. Raised and goal amounts are displayed clearly for full transparency.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📱 Fully Responsive</h4>
+                        <p>Meticulously adapted for mobile, tablet, and desktop. The navbar collapses into a hamburger menu. Campaign and volunteer grids reflow gracefully. A mobile‑only sticky donate bar ensures the CTA is always accessible on small screens.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📝 Contact &amp; Newsletter Forms</h4>
+                        <p>Contact form with validation and status feedback. Footer newsletter input with arrow submission. Both are ready to connect to Formspree, Netlify, or any backend.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>👥 Volunteer Profiles</h4>
+                        <p>Four volunteer cards with hover overlays revealing names, roles, and social media links — humanizing the organization and building donor trust.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>⭐ Testimonial Carousel</h4>
+                        <p>Bootstrap‑powered carousel cycling through donor and partner testimonials with star ratings, photos, and names. Two slides with multiple cards each.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🎯 Floating Hero Cards</h4>
+                        <p>Two floating stat cards ("Meals served today" and "100% Verified &amp; secure") hover beside the hero image, reinforcing credibility at first glance.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🔝 Scroll‑to‑Top with Progress Ring</h4>
+                        <p>A circular button with an SVG progress ring that tracks scroll position. Clicking it smooth‑scrolls the user back to the top of the page.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📺 Video Story Modal</h4>
+                        <p>A Bootstrap modal triggered from the hero's "Watch Story" button — includes a placeholder for your hosted video with a 16:9 ratio container.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📱 Mobile Sticky Donate Bar</h4>
+                        <p>A fixed bottom bar visible only on mobile devices, keeping the "Donate Now" CTA always within thumb's reach.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🛡️ Trust Badges</h4>
+                        <p>Footer badges displaying "Registered 501(c)(3)" and "SSL Secured" with shield icons — reinforcing donor confidence at the point of decision.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Customization -->
+            <section id="customize" class="section">
+                <h2>🎨 Colors &amp; Typography</h2>
+
+                <h3>Change Brand Colors</h3>
+                <p>
+                    Open <code>assets/style.css</code> and edit the <code>:root</code> block. Every component references these CSS custom properties, so changing them updates the entire site instantly:
+                </p>
+                <div class="code">:root {
+                    --clr-primary: #F59E0B; /* warm amber — buttons, links, accents */
+                    --clr-primary-dark: #D97706; /* deeper amber for hover states */
+                    --clr-secondary: #0F172A; /* deep navy — footer, dark backgrounds */
+                    --clr-bg: #FDFBF7; /* warm cream — section backgrounds */
+                    --clr-white: #FFFFFF;
+                    --clr-text: #1C1917; /* near‑black for body text */
+                    --clr-text-muted: #6B7280; /* muted gray for secondary text */
+                    --clr-border: #E5E7EB; /* light border color */
+                    --clr-accent-glow: rgba(245, 158, 11, 0.25); /* amber glow for hero */
+                    --font-display: 'Poppins', sans-serif; /* headings */
+                    --font-body: 'Nunito Sans', sans-serif; /* body text */
+                    --radius-card: 16px;
+                    --radius-btn: 50px;
+                }</div>
+                <p>Change any value and every button, link, card, glow, and hover state updates automatically — no need to hunt through the stylesheet.</p>
+
+                <h3>Typography</h3>
+                <p>
+                    Hopewell uses <strong>Poppins</strong> (a friendly, geometric sans‑serif) for all display headlines and <strong>Nunito Sans</strong> (a clean, rounded sans‑serif) for body text. Both are loaded from Google Fonts in the <code>&lt;head&gt;</code>. To change them:
+                </p>
+                <ol>
+                    <li>Update the Google Fonts <code>&lt;link&gt;</code> in <code>index.html</code> with your chosen fonts</li>
+                    <li>Edit the <code>--font-display</code> and <code>--font-body</code> variables in <code>style.css</code></li>
+                    <li>Update the <code>font-family</code> fallback stacks as needed</li>
+                </ol>
+                <div class="note">
+                    <strong>Font weights used:</strong> Poppins 400, 500, 600, 700, 800 — Nunito Sans 400, 500, 600, 700. Make sure your replacement fonts include similar weight ranges for consistent visual hierarchy.
+                </div>
+            </section>
+
+            <!-- Images -->
+            <section id="images" class="section">
+                <h2>🖼️ Images &amp; Assets</h2>
+                <p>
+                    Template images are loaded from <strong>Unsplash</strong> and <strong>Magnific</strong> CDNs as placeholders. Replace them with your own photography by updating the <code>src</code> attributes throughout <code>index.html</code>.
+                </p>
+                <pre class="code">assets/
+                    ├── bootstrap.min.css (Bootstrap 5 — local)
+                    ├── bootstrap.bundle.min.js (Bootstrap JS — local)
+                    ├── style.css (Custom styles &amp; animations)
+                    ├── script.js (All interactive logic)
+                └── hand-heart.png (Favicon — replace with your logo)</pre>
+                <div class="note">
+                    <strong>Image recommendations:</strong>
+                    <br>• Hero image: 900×1000px, warm, empathetic, showing beneficiaries smiling
+                    <br>• Campaign cards: 600×420px, context‑rich photos of the cause in action
+                    <br>• Volunteer portraits: 400×480px, friendly professional headshots with eye contact
+                    <br>• About collage: 800×650px (main) + 500×500px (secondary), candid care moments
+                    <br>• Testimonial avatars: 100×100px, tight circular crops
+                    <br>• All images should be compressed (WebP recommended) for fast loading
+                </div>
+            </section>
+
+            <!-- Forms -->
+            <section id="forms" class="section">
+                <h2>📬 Forms &amp; Interactions</h2>
+                <p>
+                    The contact form (<code>#contactForm</code>), newsletter input, and all donation buttons use <code>event.preventDefault()</code> for demonstration. You can connect them to any backend:
+                </p>
+                <ul>
+                    <li><strong>Formspree</strong> — add your endpoint to the form's <code>action</code> attribute</li>
+                    <li><strong>Netlify Forms</strong> — add the <code>netlify</code> attribute to the <code>&lt;form&gt;</code> tag</li>
+                    <li><strong>PHP Mail</strong> — point the form to your <code>mailer.php</code> script</li>
+                    <li><strong>Zapier / Make</strong> — webhook integration via <code>fetch()</code></li>
+                </ul>
+                <div class="code">// Example: contact form handler (found in assets/script.js)
+                    const contactForm = document.getElementById('contactForm');
+                    contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // your submission logic here (fetch, axios, etc.)
+                    const statusEl = document.getElementById('formStatus');
+                    statusEl.textContent = '✓ Thank you! Your message has been sent.';
+                    statusEl.className = 'text-success mt-2';
+                    this.reset();
+                    });</div>
+                <p>
+                    Other interactions — preloader fade‑out, counter animations, campaign progress bar fills, scroll‑to‑top button with SVG ring progress, mobile menu toggle, AOS initialization, and the story modal — are all fully functional out of the box and require no API keys or configuration.
+                </p>
+
+                <h3>Interaction Summary</h3>
+                <ul>
+                    <li><strong>Preloader:</strong> Hides after <code>window</code> load with a fade‑out transition</li>
+                    <li><strong>Counters:</strong> Animate on scroll using <code>IntersectionObserver</code> — increment from 0 to target</li>
+                    <li><strong>Progress Bars:</strong> Read <code>data-progress</code> attributes and animate width on load</li>
+                    <li><strong>Scroll‑to‑Top:</strong> Appears after 300px scroll; SVG ring tracks scroll percentage; smooth scrolls to top on click</li>
+                    <li><strong>Mobile Donate Bar:</strong> Shown/hidden based on viewport width and scroll position</li>
+                    <li><strong>AOS:</strong> Initialized with default easing and once‑per‑visit settings</li>
+                    <li><strong>Navbar:</strong> Bootstrap collapse with hamburger toggler on mobile</li>
+                    <li><strong>Testimonial Carousel:</strong> Bootstrap carousel with auto‑cycling and manual indicators</li>
+                </ul>
+            </section>
+
+            <!-- FAQ -->
+            <section id="faq" class="section">
+                <h2>❓ FAQ &amp; Support</h2>
+
+                <h3>How do I change the donation amounts?</h3>
+                <p>Open <code>index.html</code> and locate each campaign card inside the <code>#causes</code> section. Update the <code>.raised</code> and <code>.goal</code> spans, and adjust the <code>data-progress</code> attribute on the progress fill element to reflect the new percentage.</p>
+
+                <h3>How do I add a new campaign?</h3>
+                <p>Copy an existing <code>.cause-card</code> block inside the <code>.row.g-4</code> container in the Causes section. Update the image <code>src</code>, category tag, title, description, progress bar <code>data-progress</code>, and raised/goal amounts. The grid uses Bootstrap's <code>col-md-6 col-lg-4</code> classes, so it automatically handles 2‑per‑row on tablets and 3‑per‑row on desktops.</p>
+
+                <h3>How do I connect the contact form to receive emails?</h3>
+                <p>The simplest approach is <strong>Formspree</strong>: sign up at formspree.io, create a form, and paste your unique endpoint URL into the contact form's <code>action</code> attribute. For Netlify, add <code>netlify</code> to the <code>&lt;form&gt;</code> tag. The JavaScript handler in <code>script.js</code> is already set up to work with either approach.</p>
+
+                <h3>Can I make this a multi‑page site instead of single‑page?</h3>
+                <p>Yes. Each section (<code>#about</code>, <code>#causes</code>, <code>#contact</code>, etc.) can be extracted into its own HTML file. Copy the shared navbar and footer into each page, update the navigation links to point to the new files instead of anchor hashes, and you'll have a traditional multi‑page site.</p>
+
+                <h3>How do I change the favicon?</h3>
+                <p>Replace <code>assets/hand-heart.png</code> with your own icon file. For best results, use a 64×64px PNG. If you prefer a different filename, update the <code>&lt;link rel="icon"&gt;</code> tag in the <code>&lt;head&gt;</code> of <code>index.html</code>.</p>
+
+                <div class="note">
+                    <strong>Need help?</strong> If you run into any issues or have questions about customization, reach out to the theme author with your purchase receipt. We're happy to help you get Hopewell looking exactly the way you need it.
+                </div>
+            </section>
+
+            <!-- Credits -->
+            <section id="credits" class="section">
+                <h2>🙏 Credits</h2>
+                <ul>
+                    <li><strong>Bootstrap 5</strong> — Front‑end component library (MIT License)</li>
+                    <li><strong>Bootstrap Icons</strong> — Icon library by the Bootstrap team (MIT License)</li>
+                    <li><strong>AOS</strong> — Animate on Scroll library by Michał Sajnóg (MIT License)</li>
+                    <li><strong>Google Fonts</strong> — Poppins &amp; Nunito Sans (Open Font License)</li>
+                    <li><strong>Unsplash</strong> — Placeholder photography (replace with your own licensed images)</li>
+                    <li><strong>Magnific</strong> — Additional placeholder portraits (replace with your own)</li>
+                </ul>
+            </section>
+
+            <hr>
+            <p style="text-align:center; color:var(--text-muted); font-size:14px; margin-top:40px;">
+                ♥ Hopewell — Give Hope, Change Lives ♥
+            </p>
+        </div>
+    </div>
+</body>
+</html>

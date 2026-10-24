@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Bootstrap (layout grid only) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="assets/style.css" rel="stylesheet">
+
+<title>Financial Reports — Hopewell</title>
+<meta name="description" content="Hopewell's audited financial reports, fund allocation breakdown, and annual disclosures — the full ledger behind every donation.">
+
+
+</head>
+<body>
+
+<!-- ============================================
+     PRELOADER
+============================================ -->
+<div id="hj-preloader" aria-hidden="true">
+  <div class="hj-stamp-ring"><i class="bi bi-graph-up-arrow"></i></div>
+  <div class="hj-preload-text">Balancing the ledger&hellip;</div>
+</div>
+
+<!-- ============================================
+     NAVBAR
+============================================ -->
+<nav class="hj-nav">
+  <div class="hj-container hj-nav-inner">
+    <a class="hj-logo" href="index-2.html">
+      <span class="hj-logo-mark"><i class="bi bi-heart-fill"></i></span>
+      Hope<span class="dot">well</span>
+    </a>
+    <button class="hj-nav-toggle" id="hjNavToggle" aria-label="Toggle navigation"><i class="bi bi-list"></i></button>
+    <ul class="hj-nav-links" id="hjNavLinks">
+      <li><a href="index-2.html#home">Home</a></li>
+      <li><a href="index-2.html#about">About</a></li>
+      <li><a href="index-2.html#causes">Causes</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="index-2.html#contact">Contact</a></li>
+    </ul>
+    <a href="index-2.html#causes" class="hj-btn hj-btn-primary hj-nav-cta">Donate Now <i class="bi bi-arrow-right"></i></a>
+  </div>
+</nav>
+
+<!-- ============================================
+     DOC HERO
+============================================ -->
+<header class="hj-doc-hero">
+  <div class="hj-container">
+    <span class="hj-eyebrow"><i class="bi bi-graph-up-arrow"></i> Doc No. HW&#8209;FIN&#8209;2026</span>
+    <h1 class="hj-h1 mt-4" style="font-size:clamp(2rem,4vw,3rem);">Financial Reports</h1>
+    <p class="hj-lede mt-3">The full ledger behind every gift — audited annually, published openly, and broken down to the dollar so you can see exactly where your donation travels.</p>
+    <div class="hj-doc-meta">
+      <div class="hj-doc-meta-item">Fiscal Year<b>Jan – Dec 2025</b></div>
+      <div class="hj-doc-meta-item">Independent Auditor<b>Halden &amp; Cross LLP</b></div>
+      <div class="hj-doc-meta-item">Filing Status<b>IRS Form 990 Filed</b></div>
+      <div class="hj-doc-meta-item">Last Updated<b>August 10, 2026</b></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================
+     ALLOCATION BREAKDOWN
+============================================ -->
+<section class="hj-section">
+  <div class="hj-container">
+    <div class="text-center mx-auto mb-5" style="max-width:640px;" data-aos="fade-up">
+      <span class="hj-eyebrow"><i class="bi bi-pie-chart-fill"></i> Fund Allocation, FY2025</span>
+      <h2 class="hj-h2 mt-3">Where every dollar travels</h2>
+      <p class="hj-lede mx-auto mt-2">A rolling twelve-month breakdown of every dollar Hopewell received, from checkout to final disbursement.</p>
+    </div>
+
+    <div class="row g-4 align-items-stretch">
+      <div class="col-lg-7" data-aos="fade-right">
+        <div class="hj-alloc-panel h-100">
+          <div class="hj-alloc-row">
+            <div class="hj-alloc-top"><span class="lbl"><i class="bi bi-heart-fill"></i> Program Delivery</span><span class="pct">84%</span></div>
+            <div class="hj-alloc-track"><div class="hj-alloc-fill" data-progress="84"></div></div>
+            <div class="hj-alloc-sub">Meals, wells, school kits, clinics, and emergency relief shipped directly to verified causes.</div>
+          </div>
+          <div class="hj-alloc-row">
+            <div class="hj-alloc-top"><span class="lbl"><i class="bi bi-gear-fill"></i> Administration</span><span class="pct">10%</span></div>
+            <div class="hj-alloc-track"><div class="hj-alloc-fill hj-fill-admin" data-progress="10"></div></div>
+            <div class="hj-alloc-sub">Partner audits, field coordination staff, compliance, and platform operations.</div>
+          </div>
+          <div class="hj-alloc-row">
+            <div class="hj-alloc-top"><span class="lbl"><i class="bi bi-megaphone-fill"></i> Fundraising</span><span class="pct">6%</span></div>
+            <div class="hj-alloc-track"><div class="hj-alloc-fill hj-fill-fund" data-progress="6"></div></div>
+            <div class="hj-alloc-sub">Donor communications, campaign production, and outreach costs.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5" data-aos="fade-left">
+        <div class="hj-alloc-panel h-100 d-flex flex-column justify-content-center">
+          <div class="hj-sidebar-stat" style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px dashed var(--hj-line);">
+            <span style="color:var(--hj-muted);font-size:.88rem;">Total revenue, FY2025</span>
+            <b class="hj-kicker-num">$2,400,000</b>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px dashed var(--hj-line);">
+            <span style="color:var(--hj-muted);font-size:.88rem;">Total program spend</span>
+            <b class="hj-kicker-num">$2,016,000</b>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px dashed var(--hj-line);">
+            <span style="color:var(--hj-muted);font-size:.88rem;">Program efficiency ratio</span>
+            <b class="hj-kicker-num">84¢ / $1</b>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:14px 0;">
+            <span style="color:var(--hj-muted);font-size:.88rem;">Countries funded</span>
+            <b class="hj-kicker-num">40</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     YEAR-OVER-YEAR LEDGER
+============================================ -->
+<section class="hj-section" style="background:var(--hj-canvas-raised);">
+  <div class="hj-container">
+    <div class="text-center mx-auto mb-5" style="max-width:640px;" data-aos="fade-up">
+      <span class="hj-eyebrow"><i class="bi bi-journal-text"></i> The Ledger</span>
+      <h2 class="hj-h2 mt-3">Four years, side by side</h2>
+    </div>
+    <div class="hj-ledger-table-wrap" data-aos="zoom-in">
+      <table class="hj-ledger-table">
+        <thead>
+          <tr><th>Fiscal Year</th><th>Revenue</th><th>Program Spend</th><th>Admin &amp; Fundraising</th><th>Efficiency Ratio</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>FY2022</td><td>$1,180,000</td><td>$967,600</td><td>$212,400</td><td>82%</td></tr>
+          <tr><td>FY2023</td><td>$1,640,000</td><td>$1,378,600</td><td>$261,400</td><td>84%</td></tr>
+          <tr><td>FY2024</td><td>$1,950,000</td><td>$1,638,000</td><td>$312,000</td><td>84%</td></tr>
+          <tr class="hj-total"><td>FY2025</td><td>$2,400,000 <span class="hj-up"><i class="bi bi-arrow-up-short"></i></span></td><td>$2,016,000</td><td>$384,000</td><td>84%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     EXPENSE CATEGORIES
+============================================ -->
+<section class="hj-section">
+  <div class="hj-container">
+    <div class="text-center mx-auto mb-5" style="max-width:640px;" data-aos="fade-up">
+      <span class="hj-eyebrow"><i class="bi bi-grid-fill"></i> Program Spend, FY2025</span>
+      <h2 class="hj-h2 mt-3">Broken down by cause category</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" data-aos="fade-up">
+        <div class="hj-why-card"><div class="hj-why-ic"><i class="bi bi-cup-hot-fill"></i></div><h5>Nutrition <span class="pct">32%</span></h5><p>Daily meal programs across rural school districts and community kitchens.</p></div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+        <div class="hj-why-card"><div class="hj-why-ic"><i class="bi bi-droplet-fill"></i></div><h5>Clean Water <span class="pct">21%</span></h5><p>Well construction, filtration systems, and sanitation infrastructure.</p></div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+        <div class="hj-why-card"><div class="hj-why-ic"><i class="bi bi-book-fill"></i></div><h5>Education <span class="pct">18%</span></h5><p>School kits, tuition support, and classroom construction.</p></div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up">
+        <div class="hj-why-card"><div class="hj-why-ic"><i class="bi bi-heart-pulse-fill"></i></div><h5>Healthcare <span class="pct">15%</span></h5><p>Mobile clinics, medicine, and checkups for remote communities.</p></div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+        <div class="hj-why-card"><div class="hj-why-ic"><i class="bi bi-house-heart-fill"></i></div><h5>Emergency Relief <span class="pct">9%</span></h5><p>Flood, drought, and disaster response shelter and supplies.</p></div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+        <div class="hj-why-card"><div class="hj-why-ic"><i class="bi bi-person-heart"></i></div><h5>Elder Care <span class="pct">5%</span></h5><p>Companionship, meals, and support for isolated seniors.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     DOWNLOADABLE REPORTS
+============================================ -->
+<section class="hj-section" style="background:var(--hj-canvas-raised);">
+  <div class="hj-container">
+    <div class="text-center mx-auto mb-5" style="max-width:640px;" data-aos="fade-up">
+      <span class="hj-eyebrow"><i class="bi bi-download"></i> Full Disclosures</span>
+      <h2 class="hj-h2 mt-3">Download the complete reports</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3" data-aos="fade-up">
+        <a href="#" class="hj-report-card text-decoration-none">
+          <div class="hj-report-ic"><i class="bi bi-file-earmark-pdf-fill"></i></div>
+          <div class="hj-report-info"><div class="yr">FY2025</div><h5>Annual Report</h5><div class="sz">PDF · 2.4 MB</div></div>
+          <div class="hj-report-dl"><i class="bi bi-arrow-down"></i></div>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="80">
+        <a href="#" class="hj-report-card text-decoration-none">
+          <div class="hj-report-ic"><i class="bi bi-file-earmark-text-fill"></i></div>
+          <div class="hj-report-info"><div class="yr">FY2025</div><h5>IRS Form 990</h5><div class="sz">PDF · 1.1 MB</div></div>
+          <div class="hj-report-dl"><i class="bi bi-arrow-down"></i></div>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="160">
+        <a href="#" class="hj-report-card text-decoration-none">
+          <div class="hj-report-ic"><i class="bi bi-clipboard2-check-fill"></i></div>
+          <div class="hj-report-info"><div class="yr">FY2025</div><h5>Audit Opinion Letter</h5><div class="sz">PDF · 640 KB</div></div>
+          <div class="hj-report-dl"><i class="bi bi-arrow-down"></i></div>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
+        <a href="#" class="hj-report-card text-decoration-none">
+          <div class="hj-report-ic"><i class="bi bi-archive-fill"></i></div>
+          <div class="hj-report-info"><div class="yr">FY2022–24</div><h5>Prior Year Archive</h5><div class="sz">ZIP · 6.8 MB</div></div>
+          <div class="hj-report-dl"><i class="bi bi-arrow-down"></i></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     AUDIT CALLOUT + CTA
+============================================ -->
+<section class="hj-section">
+  <div class="hj-container">
+    <div class="hj-audit-panel" data-aos="zoom-in">
+      <div class="hj-audit-text">
+        <div class="hj-audit-badge"><i class="bi bi-patch-check-fill"></i></div>
+        <div>
+          <h3>Independently audited, every year.</h3>
+          <p>Halden &amp; Cross LLP completes a full independent audit of Hopewell's financials annually. Our program efficiency ratio has held at 82–84% for four consecutive years.</p>
+        </div>
+      </div>
+      <a href="index-2.html#contact" class="hj-btn hj-btn-gold">Ask Us a Question <i class="bi bi-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+============================================ -->
+<footer class="hj-footer">
+  <div class="hj-container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <a class="hj-logo" href="index-2.html" style="color:#fff;">
+          <span class="hj-logo-mark"><i class="bi bi-heart-fill"></i></span>
+          Hope<span class="dot" style="color:var(--hj-gold);">well</span>
+        </a>
+        <p class="mt-3">A transparent, donor-first charity connecting givers directly to verified causes worldwide since 2013. Every gift is tracked from wallet to doorstep.</p>
+        <div class="hj-footer-social">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+        <div class="hj-footer-badges">
+          <span class="hj-footer-badge"><i class="bi bi-patch-check-fill"></i> Registered 501(c)(3)</span>
+          <span class="hj-footer-badge"><i class="bi bi-shield-lock-fill"></i> SSL Secured</span>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3 col-lg-2">
+        <h6>Quick Links</h6>
+        <ul>
+          <li><a class="hj-footer-link" href="index-2.html#about"><i class="bi bi-caret-right-fill"></i>About Us</a></li>
+          <li><a class="hj-footer-link" href="index-2.html#causes"><i class="bi bi-caret-right-fill"></i>Causes</a></li>
+          <li><a class="hj-footer-link" href="index-2.html#why"><i class="bi bi-caret-right-fill"></i>Why Hopewell</a></li>
+          <li><a class="hj-footer-link" href="index-2.html#volunteers"><i class="bi bi-caret-right-fill"></i>Volunteers</a></li>
+          <li><a class="hj-footer-link" href="blog.html"><i class="bi bi-caret-right-fill"></i>Blog</a></li>
+          <li><a class="hj-footer-link" href="index-2.html#contact"><i class="bi bi-caret-right-fill"></i>Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-3 col-lg-2">
+        <h6>Legal</h6>
+        <ul>
+          <li><a class="hj-footer-link" href="terms-and-conditions.html"><i class="bi bi-caret-right-fill"></i>Terms &amp; Conditions</a></li>
+          <li><a class="hj-footer-link" href="privacy-policy.html"><i class="bi bi-caret-right-fill"></i>Privacy Policy</a></li>
+          <li><a class="hj-footer-link" href="financial-reports.html"><i class="bi bi-caret-right-fill"></i>Financial Reports</a></li>
+          <li><a class="hj-footer-link" href="faq.html"><i class="bi bi-caret-right-fill"></i>FAQs</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <h6>Get In Touch</h6>
+        <div class="hj-footer-link mb-2"><i class="bi bi-geo-alt-fill"></i> 221 Riverside Lane, Austin, TX 78701</div>
+        <div class="hj-footer-link mb-2"><i class="bi bi-envelope-fill"></i> hello@hopewell.org</div>
+        <div class="hj-footer-link mb-2"><i class="bi bi-telephone-fill"></i> +1 (555) 204-8890</div>
+        <h6 class="mt-4">Newsletter</h6>
+        <div class="hj-newsletter">
+          <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+          <button type="button" aria-label="Subscribe"><i class="bi bi-arrow-right"></i></button>
+        </div>
+        <div class="hj-footer-link mt-2" style="font-size:.76rem;"><i class="bi bi-shield-check"></i> No spam. Unsubscribe anytime.</div>
+      </div>
+    </div>
+
+    <div class="hj-footer-divider"></div>
+    <div class="hj-footer-bottom">
+      <div>
+        <div>&copy; 2026 Hopewell Foundation. All rights reserved by <a href="https://www.templatemonster.com/authors/k29solutions/" target="_blank" rel="noopener noreferrer">K29Solutions</a>.</div>
+        <div class="mt-2">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-and-conditions.html">Terms of Service</a>
+          <a href="financial-reports.html">Financial Reports</a>
+          <a href="faq.html">FAQs</a>
+        </div>
+      </div>
+      <div class="text-md-end">
+        <div class="mb-2"><i class="bi bi-credit-card-2-front me-2"></i><i class="bi bi-paypal me-2"></i><i class="bi bi-google me-2"></i><i class="bi bi-apple"></i></div>
+        <div>Made with <i class="bi bi-heart-fill" style="color:var(--hj-gold);"></i> for a better world</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================
+     SCROLL TO TOP
+============================================ -->
+<div id="hj-scrolltop" role="button" aria-label="Scroll to top" tabindex="0"><i class="bi bi-arrow-up"></i></div>
+
+<!-- Bootstrap Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  AOS.init({ duration: 700, once: true, offset: 60 });
+
+  window.addEventListener('load', function () {
+    var pre = document.getElementById('hj-preloader');
+    setTimeout(function () { pre.classList.add('hj-hide'); }, 350);
+  });
+
+  var toggle = document.getElementById('hjNavToggle');
+  var links = document.getElementById('hjNavLinks');
+  toggle.addEventListener('click', function () { links.classList.toggle('hj-open'); });
+  links.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () { links.classList.remove('hj-open'); });
+  });
+
+  var scrollTop = document.getElementById('hj-scrolltop');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 420) { scrollTop.classList.add('hj-show'); }
+    else { scrollTop.classList.remove('hj-show'); }
+  });
+  scrollTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+ 
+});
+</script>
+</body>
+</html>

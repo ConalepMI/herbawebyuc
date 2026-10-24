@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hopewell — Track Every Gift, Home</title>
+<meta name="description" content="Hopewell is a transparent, donor-first charity connecting givers directly to verified causes worldwide — follow every gift from your hand to theirs.">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="assets/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- ============================================
+     PRELOADER
+============================================ -->
+<div id="hj-preloader" aria-hidden="true">
+  <div class="hj-stamp-ring"><i class="bi bi-heart-fill"></i></div>
+  <div class="hj-preload-text">Stamping your visit&hellip;</div>
+</div>
+
+<!-- ============================================
+     NAVBAR
+============================================ -->
+<nav class="hj-nav">
+  <div class="hj-container hj-nav-inner">
+    <a class="hj-logo" href="#home">
+      <span class="hj-logo-mark"><i class="bi bi-heart-fill"></i></span>
+      Hope<span class="dot">well</span>
+    </a>
+    <button class="hj-nav-toggle" id="hjNavToggle" aria-label="Toggle navigation"><i class="bi bi-list"></i></button>
+    <ul class="hj-nav-links" id="hjNavLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#causes">Causes</a></li>
+      <li><a href="#volunteers">Volunteers</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#causes" class="hj-btn hj-btn-primary hj-nav-cta">Donate Now <i class="bi bi-arrow-right"></i></a>
+  </div>
+</nav>
+
+<!-- ============================================
+     HERO
+============================================ -->
+<header class="hj-hero" id="home">
+  <div class="hj-container">
+    <div class="hj-hero-grid">
+      <div data-aos="fade-right">
+        <span class="hj-eyebrow"><i class="bi bi-upc-scan"></i> Tracking No. HW&#8209;2026&#8209;04471</span>
+        <h1 class="hj-h1 mt-4">Every gift ships with <em>proof of delivery.</em></h1>
+        <p class="hj-lede mt-4">Hopewell connects everyday donors directly with verified, on-the-ground causes — meals, schooling, clean water, medical care — and hands you a receipt for every mile your gift travels.</p>
+
+        <div class="hj-route">
+          <div class="hj-route-stop"><span class="hj-route-dot"></span> Your Gift</div>
+          <span class="hj-route-dash"></span>
+          <div class="hj-route-stop"><span class="hj-route-dot"></span> Verified NGO</div>
+          <span class="hj-route-dash"></span>
+          <div class="hj-route-stop"><span class="hj-route-dot"></span> Doorstep, Tracked</div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#causes" class="hj-btn hj-btn-primary" id="hjHeroDonate">Donate Now <i class="bi bi-arrow-right"></i></a>
+          <a href="#" class="hj-btn hj-btn-outline" data-bs-toggle="modal" data-bs-target="#hjStoryModal"><i class="bi bi-play-circle"></i> Watch Story</a>
+        </div>
+
+        <div class="hj-hero-stats">
+          <div class="hj-hero-stat"><b>12,600+</b><span>Donors on the ledger</span></div>
+          <div class="hj-hero-stat"><b>40</b><span>Countries reached</span></div>
+          <div class="hj-hero-stat"><b>100%</b><span>Gifts verified &amp; tracked</span></div>
+        </div>
+      </div>
+
+      <div class="hj-hero-media" data-aos="fade-left" data-aos-delay="120">
+        <div class="hj-manifest-card">
+          <div class="hj-manifest-photo">
+            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=900&h=1000&fit=crop&auto=format" alt="Children supported by Hopewell smiling" loading="lazy">
+          </div>
+          <div class="hj-postmark"><i class="bi bi-patch-check-fill"></i>Hopewell<br>Verified</div>
+          <div class="hj-tracking-tag">
+            <i class="bi bi-cup-hot-fill"></i>
+            <div><div class="lbl">Delivered Today</div><div class="val">42,180 meals</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================
+     LEDGER STAT STRIP
+============================================ -->
+<section class="hj-section-tight" id="impact">
+  <div class="hj-container">
+    <div class="hj-ledger" data-aos="zoom-in">
+      <div class="hj-ledger-item"><div class="hj-ledger-num"><span class="hj-counter" data-target="184000">0</span>+</div><div class="hj-ledger-label">Meals Served</div></div>
+      <div class="hj-ledger-item"><div class="hj-ledger-num"><span class="hj-counter" data-target="52300">0</span>+</div><div class="hj-ledger-label">Children Helped</div></div>
+      <div class="hj-ledger-item"><div class="hj-ledger-num"><span class="hj-counter" data-target="3800">0</span>+</div><div class="hj-ledger-label">Active Volunteers</div></div>
+      <div class="hj-ledger-item"><div class="hj-ledger-num">$<span class="hj-counter" data-target="2400000">0</span></div><div class="hj-ledger-label">Funds Raised</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     ABOUT — chain of custody
+============================================ -->
+<section class="hj-section" id="about">
+  <div class="hj-container">
+    <div class="hj-about-grid">
+      <div class="hj-collage" data-aos="fade-right">
+        <div class="hj-collage-main"><img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=800&h=650&fit=crop&auto=format" alt="Volunteers distributing supplies" loading="lazy"></div>
+        <div class="hj-collage-badge">
+          <div class="ring">13yrs</div>
+          <div><div style="font-family:var(--hj-font-display);font-weight:600;">Trusted Since</div><div style="color:var(--hj-muted);font-size:.8rem;">2013 · 40 countries</div></div>
+        </div>
+      </div>
+      <div data-aos="fade-left">
+        <span class="hj-eyebrow"><i class="bi bi-journal-check"></i> Chain of Custody</span>
+        <h2 class="hj-h2 mt-3">We believe generosity works best when it's traceable.</h2>
+        <p class="hj-lede mt-3">Hopewell started in a single village kitchen in 2013 and has grown into a donor network spanning 40 countries — without ever losing the paper trail between your wallet and someone's doorstep.</p>
+        <ul class="hj-checklist">
+          <li><span class="box"><i class="bi bi-check-lg"></i></span><div><strong>Full transparency</strong><p>Track your donation from wallet to warehouse to doorstep.</p></div></li>
+          <li><span class="box"><i class="bi bi-check-lg"></i></span><div><strong>Verified NGO partners</strong><p>Every partner is audited annually by an independent body.</p></div></li>
+          <li><span class="box"><i class="bi bi-check-lg"></i></span><div><strong>On-the-ground reach</strong><p>Local teams in 40 countries, not a single head office.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CAUSES — postcards
+============================================ -->
+<section class="hj-section" id="causes" style="background:var(--hj-canvas-raised);">
+  <div class="hj-container">
+    <div class="text-center mx-auto mb-5" style="max-width:640px;" data-aos="fade-up">
+      <span class="hj-eyebrow"><i class="bi bi-mailbox2"></i> Open Manifests</span>
+      <h2 class="hj-h2 mt-3">Causes waiting for a signature</h2>
+      <p class="hj-lede mx-auto mt-2">Every campaign below is independently verified and updated weekly with real disbursement records.</p>
+    </div>
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-4" data-aos="fade-up">
+        <div class="hj-postcard">
+          <div class="hj-postcard-img">
+            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&h=420&fit=crop&auto=format" alt="Meals for children campaign" loading="lazy">
+            <span class="hj-postcard-stamp">Nutrition</span>
+          </div>
+          <div class="hj-postcard-body">
+            <h5>Daily Meals for 500 Children</h5>
+            <p>Providing nutritious school lunches across rural districts.</p>
+            <div class="hj-route-track"><div class="hj-route-fill" data-progress="78"></div></div>
+            <div class="hj-postcard-meta"><span>$23,400 raised</span><span>of $30,000</span></div>
+            <button class="hj-postcard-donate">Donate to this cause</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="hj-postcard">
+          <div class="hj-postcard-img">
+            <img src="https://images.unsplash.com/photo-1541692641319-981cc79ee10a?w=600&h=420&fit=crop&auto=format" alt="Clean water well campaign" loading="lazy">
+            <span class="hj-postcard-stamp">Clean Water</span>
+          </div>
+          <div class="hj-postcard-body">
+            <h5>Wells for 12 Villages</h5>
+            <p>Building sustainable water access in drought-hit regions.</p>
+            <div class="hj-route-track"><div class="hj-route-fill" data-progress="55"></div></div>
+            <div class="hj-postcard-meta"><span>$16,500 raised</span><span>of $30,000</span></div>
+            <button class="hj-postcard-donate">Donate to this cause</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="hj-postcard">
+          <div class="hj-postcard-img">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=420&fit=crop&auto=format" alt="School supplies campaign" loading="lazy">
+            <span class="hj-postcard-stamp">Education</span>
+          </div>
+          <div class="hj-postcard-body">
+            <h5>Books &amp; Bags for 800 Kids</h5>
+            <p>Full school kits ahead of the new academic year.</p>
+            <div class="hj-route-track"><div class="hj-route-fill" data-progress="92"></div></div>
+            <div class="hj-postcard-meta"><span>$18,400 raised</span><span>of $20,000</span></div>
+            <button class="hj-postcard-donate">Donate to this cause</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-aos="fade-up">
+        <div class="hj-postcard">
+          <div class="hj-postcard-img">
+            <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=600&h=420&fit=crop&auto=format" alt="Mobile health clinic campaign" loading="lazy">
+            <span class="hj-postcard-stamp">Healthcare</span>
+          </div>
+          <div class="hj-postcard-body">
+            <h5>Mobile Health Clinics</h5>
+            <p>Free checkups and medicine for remote communities.</p>
+            <div class="hj-route-track"><div class="hj-route-fill" data-progress="41"></div></div>
+            <div class="hj-postcard-meta"><span>$12,300 raised</span><span>of $30,000</span></div>
+            <button class="hj-postcard-donate">Donate to this cause</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="hj-postcard">
+          <div class="hj-postcard-img">
+            <img src="https://images.unsplash.com/photo-1618477388954-7852f32655ec?w=600&h=420&fit=crop&auto=format" alt="Emergency relief campaign" loading="lazy">
+            <span class="hj-postcard-stamp">Emergency Relief</span>
+          </div>
+          <div class="hj-postcard-body">
+            <h5>Flood Relief Fund</h5>
+            <p>Shelter, food and blankets for displaced families.</p>
+            <div class="hj-route-track"><div class="hj-route-fill" data-progress="66"></div></div>
+            <div class="hj-postcard-meta"><span>$19,800 raised</span><span>of $30,000</span></div>
+            <button class="hj-postcard-donate">Donate to this cause</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="hj-postcard">
+          <div class="hj-postcard-img">
+            <img src="https://images.unsplash.com/photo-1594708767771-a7502209ff51?w=600&h=420&fit=crop&auto=format" alt="Elderly care campaign" loading="lazy">
+            <span class="hj-postcard-stamp">Elder Care</span>
+          </div>
+          <div class="hj-postcard-body">
+            <h5>Warm Homes for Elders</h5>
+            <p>Companionship, meals and care for isolated seniors.</p>
+            <div class="hj-route-track"><div class="hj-route-fill" data-progress="34"></div></div>
+            <div class="hj-postcard-meta"><span>$8,100 raised</span><span>of $24,000</span></div>
+            <button class="hj-postcard-donate">Donate to this cause</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     WHY HOPEWELL
+============================================ -->
+<section class="hj-section" id="why">
+  <div class="hj-container">
+    <div class="text-center mx-auto mb-5" style="max-width:640px;" data-aos="fade-up">
+      <span class="hj-eyebrow"><i class="bi bi-clipboard2-check"></i> The Fine Print</span>
+      <h2 class="hj-h2 mt-3">Giving you can actually verify</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" data-aos="fade-up">
+        <div class="hj-why-card"><div class="hj-why-ic"><i class="bi bi-eye-fill"></i></div><h5>Transparent Donations</h5><p>See exactly how each contribution is spent, with receipts down to the last dollar.</p></div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+        <div class="hj-why-card"><div class="hj-why-ic"><i class="bi bi-patch-check-fill"></i></div><h5>Verified NGOs</h5><p>Every partner organization passes a rigorous annual compliance audit.</p></div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+        <div class="hj-why-card"><div class="hj-why-ic"><i class="bi bi-shield-lock-fill"></i></div><h5>Secure Payments</h5><p>Bank-grade encryption protects every transaction, every time.</p></div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up">
+        <div class="hj-why-card"><div class="hj-why-ic"><i class="bi bi-graph-up-arrow"></i></div><h5>Real-Time Impact</h5><p>Live dashboards show your donation's effect as it happens on the ground.</p></div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+        <div class="hj-why-card"><div class="hj-why-ic"><i class="bi bi-file-earmark-text-fill"></i></div><h5>Tax Benefits</h5><p>Instant, downloadable tax receipts for every donation you make.</p></div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+        <div class="hj-why-card"><div class="hj-why-ic"><i class="bi bi-headset"></i></div><h5>24/7 Donor Support</h5><p>A real human is always one message away if you have questions.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     HOW YOUR GIFT TRAVELS
+============================================ -->
+<section class="hj-section" id="how" style="background:var(--hj-canvas-raised);">
+  <div class="hj-container">
+    <div class="text-center mx-auto mb-5" style="max-width:640px;" data-aos="fade-up">
+      <span class="hj-eyebrow"><i class="bi bi-signpost-split-fill"></i> The Route</span>
+      <h2 class="hj-h2 mt-3">How your gift travels</h2>
+    </div>
+    <div class="hj-journey">
+      <div class="hj-journey-line"></div>
+      <div class="row g-5 hj-journey-row">
+        <div class="col-md-4 hj-journey-stop" data-aos="fade-up">
+          <div class="hj-journey-badge">1</div>
+          <h5>Choose a Cause</h5>
+          <p>Browse verified campaigns and pick the one that speaks to you.</p>
+        </div>
+        <div class="col-md-4 hj-journey-stop" data-aos="fade-up" data-aos-delay="120">
+          <div class="hj-journey-badge">2</div>
+          <h5>Donate Securely</h5>
+          <p>Give in seconds through an encrypted, PCI-compliant checkout.</p>
+        </div>
+        <div class="col-md-4 hj-journey-stop" data-aos="fade-up" data-aos-delay="240">
+          <div class="hj-journey-badge">3</div>
+          <h5>Track Your Impact</h5>
+          <p>Follow real updates and photos as your gift reaches the ground.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     VOLUNTEERS — field ID badges
+============================================ -->
+<section class="hj-section" id="volunteers">
+  <div class="hj-container">
+    <div class="text-center mx-auto mb-5" style="max-width:640px;" data-aos="fade-up">
+      <span class="hj-eyebrow"><i class="bi bi-person-badge-fill"></i> Field Roster</span>
+      <h2 class="hj-h2 mt-3">The hands behind every delivery</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-6 col-md-3" data-aos="fade-up">
+        <div class="hj-id-card">
+          <div class="hj-id-photo">
+            <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=400&h=480&fit=crop&auto=format" alt="Volunteer Aria Chen" loading="lazy">
+            <span class="hj-id-tag">ID 041</span>
+            <div class="hj-id-info">
+              <div class="nm">Aria Chen</div><div class="rl">Field Coordinator</div>
+              <div class="hj-id-social"><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-linkedin"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="80">
+        <div class="hj-id-card">
+          <div class="hj-id-photo">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=480&fit=crop&auto=format" alt="Volunteer Marcus Lee" loading="lazy">
+            <span class="hj-id-tag">ID 052</span>
+            <div class="hj-id-info">
+              <div class="nm">Marcus Lee</div><div class="rl">Logistics Lead</div>
+              <div class="hj-id-social"><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-linkedin"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="160">
+        <div class="hj-id-card">
+          <div class="hj-id-photo">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=480&fit=crop&auto=format" alt="Volunteer Priya Nair" loading="lazy">
+            <span class="hj-id-tag">ID 063</span>
+            <div class="hj-id-info">
+              <div class="nm">Priya Nair</div><div class="rl">Community Outreach</div>
+              <div class="hj-id-social"><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-linkedin"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="240">
+        <div class="hj-id-card">
+          <div class="hj-id-photo">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=480&fit=crop&auto=format" alt="Volunteer Daniel Osei" loading="lazy">
+            <span class="hj-id-tag">ID 074</span>
+            <div class="hj-id-info">
+              <div class="nm">Daniel Osei</div><div class="rl">Medical Volunteer</div>
+              <div class="hj-id-social"><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-linkedin"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     TESTIMONIALS
+============================================ -->
+<section class="hj-section" id="testimonials" style="background:var(--hj-canvas-raised);">
+  <div class="hj-container">
+    <div class="hj-testi-section p-4 p-md-5" data-aos="zoom-in">
+      <div class="text-center mx-auto mb-5" style="max-width:600px;">
+        <span class="hj-eyebrow hj-eyebrow-light"><i class="bi bi-postcard-fill"></i> Postcards From Donors</span>
+        <h2 class="hj-h2 mt-3 text-white">Stories from our giving community</h2>
+      </div>
+      <div id="hjTestiCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row g-4 justify-content-center">
+              <div class="col-md-6 col-lg-4">
+                <div class="hj-testi-card">
+                  <div class="hj-testi-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                  <p class="hj-testi-quote">"I could actually see photos of the well being built with my donation. That kind of proof changed how I think about giving."</p>
+                  <div class="hj-testi-person">
+                    <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=100&h=100&fit=crop&auto=format" alt="Rachel Kim">
+                    <div><div class="hj-testi-name">Rachel Kim</div><div class="hj-testi-role">Monthly Donor</div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="hj-testi-card">
+                  <div class="hj-testi-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                  <p class="hj-testi-quote">"Checkout took less than a minute and I had a tax receipt in my inbox before I'd even closed the tab."</p>
+                  <div class="hj-testi-person">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&auto=format" alt="James Okafor">
+                    <div><div class="hj-testi-name">James Okafor</div><div class="hj-testi-role">First-Time Donor</div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="hj-testi-card">
+                  <div class="hj-testi-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                  <p class="hj-testi-quote">"As an NGO partner, the audit process was thorough but fair — it's clearly what keeps donor trust so high."</p>
+                  <div class="hj-testi-person">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&auto=format" alt="Sofia Bianchi">
+                    <div><div class="hj-testi-name">Sofia Bianchi</div><div class="hj-testi-role">Partner NGO Director</div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row g-4 justify-content-center">
+              <div class="col-md-6 col-lg-5">
+                <div class="hj-testi-card">
+                  <div class="hj-testi-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                  <p class="hj-testi-quote">"My workplace giving program matched my donation automatically. Hopewell made the whole thing effortless."</p>
+                  <div class="hj-testi-person">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&auto=format" alt="Tanvi Deshpande">
+                    <div><div class="hj-testi-name">Tanvi Deshpande</div><div class="hj-testi-role">Corporate Donor</div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-5">
+                <div class="hj-testi-card">
+                  <div class="hj-testi-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                  <p class="hj-testi-quote">"The impact updates felt personal, not like a form letter. I've since set up a recurring monthly gift."</p>
+                  <div class="hj-testi-person">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&auto=format" alt="Elliot Novak">
+                    <div><div class="hj-testi-name">Elliot Novak</div><div class="hj-testi-role">Recurring Donor</div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#hjTestiCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#hjTestiCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CTA — postmark banner
+============================================ -->
+<section class="hj-section" id="cta">
+  <div class="hj-container">
+    <div class="hj-cta" data-aos="zoom-in">
+      <div class="hj-cta-stamp"><i class="bi bi-heart-fill"></i></div>
+      <h2 class="hj-h2">Someone, somewhere, is waiting on the other side of your generosity.</h2>
+      <p>Every gift, however small, moves a real story forward today — and comes with a tracking number of its own.</p>
+      <button class="hj-btn hj-btn-gold" id="hjCtaDonate"><i class="bi bi-heart-fill"></i> Donate Now</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CONTACT
+============================================ -->
+<section class="hj-section" id="contact" style="background:var(--hj-canvas-raised);">
+  <div class="hj-container">
+    <div class="text-center mx-auto mb-5" style="max-width:640px;" data-aos="fade-up">
+      <span class="hj-eyebrow"><i class="bi bi-envelope-paper-fill"></i> Send Us a Line</span>
+      <h2 class="hj-h2 mt-3">We'd love to hear from you</h2>
+    </div>
+    <div class="row g-5">
+      <div class="col-lg-5" data-aos="fade-right">
+        <div class="hj-contact-panel">
+          <div class="hj-contact-item"><span class="ic"><i class="bi bi-geo-alt-fill"></i></span><div><strong>Our Office</strong><div class="sm">221 Riverside Lane, Austin, TX 78701</div></div></div>
+          <div class="hj-contact-item"><span class="ic"><i class="bi bi-envelope-fill"></i></span><div><strong>Email Us</strong><div class="sm">hello@hopewell.org</div></div></div>
+          <div class="hj-contact-item"><span class="ic"><i class="bi bi-telephone-fill"></i></span><div><strong>Call Us</strong><div class="sm">+1 (555) 204-8890</div></div></div>
+          <div class="hj-map-slot"><i class="bi bi-pin-map-fill me-2"></i> Map Embed Placeholder</div>
+        </div>
+      </div>
+      <div class="col-lg-7" data-aos="fade-left">
+        <div class="hj-contact-panel">
+          <form id="hjContactForm" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="hj-form-label" for="hj-name">Full Name</label>
+                <input type="text" class="hj-form-control" id="hj-name" placeholder="Jane Doe" required>
+              </div>
+              <div class="col-md-6">
+                <label class="hj-form-label" for="hj-email">Email Address</label>
+                <input type="email" class="hj-form-control" id="hj-email" placeholder="jane@example.com" required>
+              </div>
+              <div class="col-12">
+                <label class="hj-form-label" for="hj-subject">Subject</label>
+                <input type="text" class="hj-form-control" id="hj-subject" placeholder="How can we help?">
+              </div>
+              <div class="col-12">
+                <label class="hj-form-label" for="hj-message">Message</label>
+                <textarea class="hj-form-control" id="hj-message" rows="4" placeholder="Tell us more&hellip;" required></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="hj-btn hj-btn-primary w-100 justify-content-center">Send Message <i class="bi bi-send"></i></button>
+              </div>
+              <div class="col-12" id="hjFormStatus" role="status" aria-live="polite"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+============================================ -->
+<footer class="hj-footer">
+  <div class="hj-container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <a class="hj-logo" href="#home" style="color:#fff;">
+          <span class="hj-logo-mark"><i class="bi bi-heart-fill"></i></span>
+          Hope<span class="dot" style="color:var(--hj-gold);">well</span>
+        </a>
+        <p class="mt-3">A transparent, donor-first charity connecting givers directly to verified causes worldwide since 2013. Every gift is tracked from wallet to doorstep.</p>
+        <div class="hj-footer-social">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+        <div class="hj-footer-badges">
+          <span class="hj-footer-badge"><i class="bi bi-patch-check-fill"></i> Registered 501(c)(3)</span>
+          <span class="hj-footer-badge"><i class="bi bi-shield-lock-fill"></i> SSL Secured</span>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3 col-lg-2">
+        <h6>Quick Links</h6>
+        <ul>
+          <li><a class="hj-footer-link" href="#about"><i class="bi bi-caret-right-fill"></i>About Us</a></li>
+          <li><a class="hj-footer-link" href="#causes"><i class="bi bi-caret-right-fill"></i>Causes</a></li>
+          <li><a class="hj-footer-link" href="#why"><i class="bi bi-caret-right-fill"></i>Why Hopewell</a></li>
+          <li><a class="hj-footer-link" href="#volunteers"><i class="bi bi-caret-right-fill"></i>Volunteers</a></li>
+          <li><a class="hj-footer-link" href="#testimonials"><i class="bi bi-caret-right-fill"></i>Testimonials</a></li>
+          <li><a class="hj-footer-link" href="#contact"><i class="bi bi-caret-right-fill"></i>Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-3 col-lg-2">
+        <h6>Causes</h6>
+        <ul>
+          <li><a class="hj-footer-link" href="#causes"><i class="bi bi-caret-right-fill"></i>Nutrition</a></li>
+          <li><a class="hj-footer-link" href="#causes"><i class="bi bi-caret-right-fill"></i>Clean Water</a></li>
+          <li><a class="hj-footer-link" href="#causes"><i class="bi bi-caret-right-fill"></i>Education</a></li>
+          <li><a class="hj-footer-link" href="#causes"><i class="bi bi-caret-right-fill"></i>Healthcare</a></li>
+          <li><a class="hj-footer-link" href="#causes"><i class="bi bi-caret-right-fill"></i>Emergency Relief</a></li>
+          <li><a class="hj-footer-link" href="#causes"><i class="bi bi-caret-right-fill"></i>Elder Care</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <h6>Get In Touch</h6>
+        <div class="hj-footer-link mb-2"><i class="bi bi-geo-alt-fill"></i> 221 Riverside Lane, Austin, TX 78701</div>
+        <div class="hj-footer-link mb-2"><i class="bi bi-envelope-fill"></i> hello@hopewell.org</div>
+        <div class="hj-footer-link mb-2"><i class="bi bi-telephone-fill"></i> +1 (555) 204-8890</div>
+        <h6 class="mt-4">Newsletter</h6>
+        <div class="hj-newsletter">
+          <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+          <button type="button" aria-label="Subscribe"><i class="bi bi-arrow-right"></i></button>
+        </div>
+        <div class="hj-footer-link mt-2" style="font-size:.76rem;"><i class="bi bi-shield-check"></i> No spam. Unsubscribe anytime.</div>
+      </div>
+    </div>
+
+    <div class="hj-footer-divider"></div>
+    <div class="hj-footer-bottom">
+      <div>
+        <div>&copy; 2026 Hopewell Foundation. All rights reserved by <a href="https://www.templatemonster.com/authors/k29solutions/" target="_blank" rel="noopener noreferrer">K29Solutions</a>.</div>
+        <div class="mt-2">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+          <a href="financial-reports.html">Financial Reports</a>
+          <a href="faq.html">FAQs</a>
+        </div>
+      </div>
+      <div class="text-md-end">
+        <div class="mb-2"><i class="bi bi-credit-card-2-front me-2"></i><i class="bi bi-paypal me-2"></i><i class="bi bi-google me-2"></i><i class="bi bi-apple"></i></div>
+        <div>Made with <i class="bi bi-heart-fill" style="color:var(--hj-gold);"></i> for a better world</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================
+     MOBILE STICKY DONATE BAR
+============================================ -->
+<div class="hj-mobile-bar">
+  <a href="#causes" class="hj-btn hj-btn-primary">Donate Now <i class="bi bi-heart-fill"></i></a>
+</div>
+
+<!-- ============================================
+     SCROLL TO TOP
+============================================ -->
+<div id="hj-scrolltop" role="button" aria-label="Scroll to top" tabindex="0"><i class="bi bi-arrow-up"></i></div>
+
+<!-- ============================================
+     WATCH STORY MODAL
+============================================ -->
+<div class="modal fade" id="hjStoryModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content" style="border-radius:20px;border:none;">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" style="font-family:var(--hj-font-display);font-weight:700;">Our Story</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body pb-4">
+        <div class="ratio ratio-16x9 rounded-4 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=900&h=500&fit=crop&auto=format" alt="Hopewell story preview" style="object-fit:cover;">
+        </div>
+        <p class="text-muted mt-3 mb-0">Video placeholder — connect your hosted story video here.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>

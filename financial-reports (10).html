@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financial Reports &mdash; Hopewell</title>
+<meta name="description" content="View Hopewell's audited financial statements, fund allocation breakdown, and annual IRS Form 990 filings.">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Bootstrap -->
+<link href="assets/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="assets/style.css" rel="stylesheet" />
+<link rel="icon" type="image/x-icon" href="assets/hand-heart.png">
+
+
+</head>
+<body>
+<!-- ============================================
+     PRELOADER
+============================================ -->
+<div id="preloader" aria-hidden="true">
+  <div class="preload-ring"><i class="bi bi-heart-fill preload-heart"></i></div>
+  <div class="preload-text">LOADING HOPE&hellip;</div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-hw" id="mainNav">
+  <div class="container">
+    <a class="hw-logo" href="index.html">
+      <span class="hw-logo-mark"><i class="bi bi-heart-fill"></i></span>
+      Hope<span class="dot">well</span>
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+      <i class="bi bi-list fs-2"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav nav-hw mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#causes">Causes</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#volunteers">Volunteers</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#testimonials">Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+      </ul>
+      <a href="index.html#causes" class="btn-hw-primary d-none d-lg-inline-flex">Donate Now <i class="bi bi-arrow-right"></i></a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================
+     PAGE HEADER
+============================================ -->
+<header class="policy-hero" id="home">
+  <div class="hero-glow"></div>
+  <div class="container position-relative" data-aos="fade-up">
+    <span class="eyebrow"><i class="bi bi-bar-chart-fill"></i> Transparency</span>
+    <h1 class="hero-title mt-3" style="font-size:clamp(2rem,4vw,2.9rem);">Financial Reports</h1>
+    <p class="hero-lead mt-3">Every dollar donated to Hopewell is tracked and independently audited. Here's exactly where your generosity goes.</p>
+    <div class="policy-updated mt-3"><i class="bi bi-clock-history me-1"></i> Fiscal Year 2025 figures &middot; Last updated: August 5, 2026</div>
+  </div>
+</header>
+
+<!-- ============================================
+     SUMMARY STATS
+============================================ -->
+<section class="pb-0" style="padding-top:0;">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-6 col-lg-3" data-aos="fade-up">
+        <div class="fin-stat-card">
+          <div class="fin-stat-ic"><i class="bi bi-cash-coin"></i></div>
+          <div class="fin-stat-val">$2.4M</div>
+          <div class="fin-stat-label">Total Funds Raised</div>
+          <div class="fin-stat-trend up"><i class="bi bi-arrow-up-right"></i> 18% vs last year</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="80">
+        <div class="fin-stat-card">
+          <div class="fin-stat-ic"><i class="bi bi-heart-pulse-fill"></i></div>
+          <div class="fin-stat-val">84%</div>
+          <div class="fin-stat-label">Spent on Programs</div>
+          <div class="fin-stat-trend up"><i class="bi bi-arrow-up-right"></i> Above 80% benchmark</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="160">
+        <div class="fin-stat-card">
+          <div class="fin-stat-ic"><i class="bi bi-people-fill"></i></div>
+          <div class="fin-stat-val">12,600+</div>
+          <div class="fin-stat-label">Donors Contributing</div>
+          <div class="fin-stat-trend up"><i class="bi bi-arrow-up-right"></i> 22% vs last year</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
+        <div class="fin-stat-card">
+          <div class="fin-stat-ic"><i class="bi bi-patch-check-fill"></i></div>
+          <div class="fin-stat-val">4/4 Stars</div>
+          <div class="fin-stat-label">Charity Navigator Rating</div>
+          <div class="fin-stat-trend up"><i class="bi bi-arrow-up-right"></i> 13 years running</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     ALLOCATION BREAKDOWN
+============================================ -->
+<section class="section-pad">
+  <div class="container">
+    <div class="allocation-panel" data-aos="fade-up">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5 text-center">
+          <div class="allocation-ring">
+            <div class="allocation-ring-label">
+              <span class="big">84%</span>
+              <span class="small">of every dollar goes directly to programs</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <span class="eyebrow"><i class="bi bi-pie-chart-fill"></i> Fiscal Year 2025</span>
+          <h2 class="section-title mt-3 mb-4" style="font-size:clamp(1.6rem,2.8vw,2.1rem);">How your donation is allocated</h2>
+          <ul class="allocation-legend">
+            <li><span class="allocation-dot" style="background:var(--clr-primary);"></span> Program Services &mdash; meals, water, education, healthcare <span class="pct">84%</span></li>
+            <li><span class="allocation-dot" style="background:var(--clr-secondary);"></span> Fundraising &amp; Donor Relations <span class="pct">9%</span></li>
+            <li><span class="allocation-dot" style="background:var(--clr-accent);"></span> Administrative &amp; Operations <span class="pct">7%</span></li>
+          </ul>
+          <p class="text-muted mt-3 mb-0" style="font-size:.9rem;">Figures reflect audited results for the fiscal year ended December 31, 2025, and are consistent with Hopewell's 13-year average of 80%+ program spending.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     ANNUAL REPORTS / DOWNLOADS
+============================================ -->
+<section class="section-pad pt-0" id="reports">
+  <div class="container">
+    <div class="text-center mx-auto mb-5" style="max-width:640px;" data-aos="fade-up">
+      <span class="eyebrow"><i class="bi bi-file-earmark-bar-graph-fill"></i> Documents</span>
+      <h2 class="section-title mt-3" style="font-size:clamp(1.8rem,3.2vw,2.5rem);">Annual reports &amp; filings</h2>
+      <p class="section-sub mx-auto mt-2">Download our audited financial statements, IRS Form 990 filings, and annual impact reports.</p>
+    </div>
+
+    <div data-aos="fade-up">
+      <div class="report-row">
+        <span class="report-ic"><i class="bi bi-file-earmark-pdf-fill"></i></span>
+        <div class="report-meta">
+          <div class="report-title">2025 Annual Report &amp; Audited Financials</div>
+          <div class="report-sub">Full-year impact summary and independently audited statements</div>
+        </div>
+        <span class="report-size">2.4 MB &middot; PDF</span>
+        <button class="btn-report" type="button" data-report="2025 Annual Report"><i class="bi bi-download"></i> Download</button>
+      </div>
+      <div class="report-row">
+        <span class="report-ic"><i class="bi bi-file-earmark-pdf-fill"></i></span>
+        <div class="report-meta">
+          <div class="report-title">2025 IRS Form 990</div>
+          <div class="report-sub">Public disclosure of revenue, expenses, and governance</div>
+        </div>
+        <span class="report-size">1.1 MB &middot; PDF</span>
+        <button class="btn-report" type="button" data-report="2025 Form 990"><i class="bi bi-download"></i> Download</button>
+      </div>
+      <div class="report-row">
+        <span class="report-ic"><i class="bi bi-file-earmark-pdf-fill"></i></span>
+        <div class="report-meta">
+          <div class="report-title">2024 Annual Report &amp; Audited Financials</div>
+          <div class="report-sub">Full-year impact summary and independently audited statements</div>
+        </div>
+        <span class="report-size">2.2 MB &middot; PDF</span>
+        <button class="btn-report" type="button" data-report="2024 Annual Report"><i class="bi bi-download"></i> Download</button>
+      </div>
+      <div class="report-row">
+        <span class="report-ic"><i class="bi bi-file-earmark-pdf-fill"></i></span>
+        <div class="report-meta">
+          <div class="report-title">2024 IRS Form 990</div>
+          <div class="report-sub">Public disclosure of revenue, expenses, and governance</div>
+        </div>
+        <span class="report-size">1.0 MB &middot; PDF</span>
+        <button class="btn-report" type="button" data-report="2024 Form 990"><i class="bi bi-download"></i> Download</button>
+      </div>
+      <div class="report-row">
+        <span class="report-ic"><i class="bi bi-file-earmark-pdf-fill"></i></span>
+        <div class="report-meta">
+          <div class="report-title">2023 Annual Report &amp; Audited Financials</div>
+          <div class="report-sub">Full-year impact summary and independently audited statements</div>
+        </div>
+        <span class="report-size">2.1 MB &middot; PDF</span>
+        <button class="btn-report" type="button" data-report="2023 Annual Report"><i class="bi bi-download"></i> Download</button>
+      </div>
+      <div class="report-row mb-0">
+        <span class="report-ic"><i class="bi bi-file-earmark-pdf-fill"></i></span>
+        <div class="report-meta">
+          <div class="report-title">2022 Annual Report &amp; Audited Financials</div>
+          <div class="report-sub">Full-year impact summary and independently audited statements</div>
+        </div>
+        <span class="report-size">1.9 MB &middot; PDF</span>
+        <button class="btn-report" type="button" data-report="2022 Annual Report"><i class="bi bi-download"></i> Download</button>
+      </div>
+    </div>
+    <div id="reportStatus" class="text-center mt-4" role="status" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ============================================
+     AUDIT / TRUST STRIP
+============================================ -->
+<section class="section-pad pt-0">
+  <div class="container">
+    <div class="audit-strip" data-aos="zoom-in">
+      <div class="content row align-items-center g-4">
+        <div class="col-lg-8">
+          <h3 class="font-display fw-bold mb-2" style="font-size:1.5rem;">Independently audited, every single year</h3>
+          <p class="mb-0" style="opacity:.92;">Our financials are reviewed annually by an independent third-party accounting firm and are available for public inspection alongside our IRS Form 990 filings, in line with nonprofit transparency best practices.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a href="index.html#contact" class="btn-cta" style="display:inline-flex;align-items:center;gap:8px;"><i class="bi bi-envelope-fill"></i> Request Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     MOBILE STICKY DONATE BAR
+============================================ -->
+<div class="mobile-donate-bar">
+  <a href="index.html#causes" class="btn-hw-primary">Donate Now <i class="bi bi-heart-fill"></i></a>
+</div>
+
+<!-- ============================================
+     SCROLL TO TOP
+============================================ -->
+<div id="scrollTop" role="button" aria-label="Scroll to top" tabindex="0">
+  <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="23"></circle><circle class="progress" cx="26" cy="26" r="23"></circle></svg>
+  <i class="bi bi-arrow-up"></i>
+</div>
+
+<footer class="footer-hw">
+  <svg class="footer-wave" viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path fill="#0B1220" d="M0,32 C240,70 480,0 720,18 C960,36 1200,70 1440,26 L1440,70 L0,70 Z"></path>
+  </svg>
+  <span class="footer-glow"></span>
+  <span class="footer-glow-2"></span>
+  <div class="container footer-top">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <a class="hw-logo text-white" href="index.html">
+          <span class="hw-logo-mark"><i class="bi bi-heart-fill"></i></span>
+          Hope<span class="dot" style="color:var(--clr-primary);">well</span>
+        </a>
+        <p class="mt-3">A transparent, donor-first charity connecting givers directly to verified causes worldwide since 2013. Every gift is tracked from wallet to doorstep.</p>
+        <div class="footer-social mt-3">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+        <div class="footer-badges">
+          <span class="footer-badge"><i class="bi bi-patch-check-fill"></i> Registered 501(c)(3)</span>
+          <span class="footer-badge"><i class="bi bi-shield-lock-fill"></i> SSL Secured</span>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3 col-lg-2">
+        <h6>Quick Links</h6>
+        <ul>
+          <li><a class="footer-link" href="index.html#about"><i class="bi bi-caret-right-fill"></i>About Us</a></li>
+          <li><a class="footer-link" href="index.html#causes"><i class="bi bi-caret-right-fill"></i>Causes</a></li>
+          <li><a class="footer-link" href="index.html#why"><i class="bi bi-caret-right-fill"></i>Why Hopewell</a></li>
+          <li><a class="footer-link" href="index.html#volunteers"><i class="bi bi-caret-right-fill"></i>Volunteers</a></li>
+          <li><a class="footer-link" href="index.html#testimonials"><i class="bi bi-caret-right-fill"></i>Testimonials</a></li>
+          <li><a class="footer-link" href="index.html#contact"><i class="bi bi-caret-right-fill"></i>Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-3 col-lg-2">
+        <h6>Causes</h6>
+        <ul>
+          <li><a class="footer-link" href="index.html#causes"><i class="bi bi-caret-right-fill"></i>Nutrition</a></li>
+          <li><a class="footer-link" href="index.html#causes"><i class="bi bi-caret-right-fill"></i>Clean Water</a></li>
+          <li><a class="footer-link" href="index.html#causes"><i class="bi bi-caret-right-fill"></i>Education</a></li>
+          <li><a class="footer-link" href="index.html#causes"><i class="bi bi-caret-right-fill"></i>Healthcare</a></li>
+          <li><a class="footer-link" href="index.html#causes"><i class="bi bi-caret-right-fill"></i>Emergency Relief</a></li>
+          <li><a class="footer-link" href="index.html#causes"><i class="bi bi-caret-right-fill"></i>Elder Care</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <h6>Get In Touch</h6>
+        <div class="footer-contact-item">
+          <span class="ic"><i class="bi bi-geo-alt-fill"></i></span>
+          <span>221 Riverside Lane, Austin, TX 78701</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="ic"><i class="bi bi-envelope-fill"></i></span>
+          <span>hello@hopewell.org</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="ic"><i class="bi bi-telephone-fill"></i></span>
+          <span>+1 (555) 204-8890</span>
+        </div>
+        <h6 class="mt-4">Newsletter</h6>
+        <div class="newsletter-input">
+          <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+          <button type="button" aria-label="Subscribe"><i class="bi bi-arrow-right"></i></button>
+        </div>
+        <div class="newsletter-note"><i class="bi bi-shield-check"></i> No spam. Unsubscribe anytime.</div>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+    <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-3">
+      <div>
+        <div>&copy; 2026 Hopewell Foundation. All rights reserved by <a href="https://www.templatemonster.com/authors/k29solutions/" target="_blank" rel="noopener noreferrer">K29Solutions</a>.</div>
+        <div class="footer-bottom-links mt-2">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+          <a href="financial-reports.html">Financial Reports</a>
+          <a href="faq.html">FAQs</a>
+        </div>
+      </div>
+      <div class="text-md-end">
+        <div class="footer-payments justify-content-md-end mb-2">
+          <i class="bi bi-credit-card-2-front" title="Cards accepted"></i>
+          <i class="bi bi-paypal" title="PayPal accepted"></i>
+          <i class="bi bi-google" title="Google Pay accepted"></i>
+          <i class="bi bi-apple" title="Apple Pay accepted"></i>
+        </div>
+        <div>Made with <i class="bi bi-heart-fill text-primary-hw"></i> for a better world &bull; Distributed by <a href="https://www.themewagon.com" target="_blank" rel="noopener noreferrer">ThemeWagon</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<!-- Bootstrap Bundle -->
+<script src="assets/bootstrap.bundle.min.js"></script>
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="assets/script.js"></script>
+
+</body>
+</html>

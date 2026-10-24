@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Bootstrap (layout grid only) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<link href="assets/style.css" rel="stylesheet">
+
+<title>Field Dispatches — Hopewell Blog</title>
+<meta name="description" content="Field reports, transparency deep-dives, and donor guides from the Hopewell team — dispatched from 40 countries.">
+
+
+</head>
+<body>
+
+<!-- ============================================
+     PRELOADER
+============================================ -->
+<div id="hj-preloader" aria-hidden="true">
+  <div class="hj-stamp-ring"><i class="bi bi-newspaper"></i></div>
+  <div class="hj-preload-text">Pulling the latest dispatch&hellip;</div>
+</div>
+
+<!-- ============================================
+     NAVBAR
+============================================ -->
+<nav class="hj-nav">
+  <div class="hj-container hj-nav-inner">
+    <a class="hj-logo" href="index-2.html">
+      <span class="hj-logo-mark"><i class="bi bi-heart-fill"></i></span>
+      Hope<span class="dot">well</span>
+    </a>
+    <button class="hj-nav-toggle" id="hjNavToggle" aria-label="Toggle navigation"><i class="bi bi-list"></i></button>
+    <ul class="hj-nav-links" id="hjNavLinks">
+      <li><a href="index-2.html#home">Home</a></li>
+      <li><a href="index-2.html#about">About</a></li>
+      <li><a href="index-2.html#causes">Causes</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="index-2.html#contact">Contact</a></li>
+    </ul>
+    <a href="index-2.html#causes" class="hj-btn hj-btn-primary hj-nav-cta">Donate Now <i class="bi bi-arrow-right"></i></a>
+  </div>
+</nav>
+
+<!-- ============================================
+     DOC HERO
+============================================ -->
+<header class="hj-doc-hero">
+  <div class="hj-container">
+    <span class="hj-eyebrow"><i class="bi bi-broadcast"></i> Dispatched From 40 Countries</span>
+    <h1 class="hj-h1 mt-4" style="font-size:clamp(2rem,4vw,3.2rem);">Field Dispatches</h1>
+    <p class="hj-lede mt-3">Reports from the field, transparency deep-dives, and donor guides — the paper trail behind every gift, written up by the people who deliver it.</p>
+    <div class="hj-faq-search">
+      <i class="bi bi-search"></i>
+      <input type="text" id="hjBlogSearch" placeholder="Search dispatches, e.g. &ldquo;clean water&rdquo;" aria-label="Search blog posts">
+    </div>
+    <div class="hj-faq-chips" id="hjBlogChips">
+      <button class="hj-faq-chip hj-active" data-filter="all">All Dispatches</button>
+      <button class="hj-faq-chip" data-filter="field-reports">Field Reports</button>
+      <button class="hj-faq-chip" data-filter="transparency">Transparency</button>
+      <button class="hj-faq-chip" data-filter="volunteer-stories">Volunteer Stories</button>
+      <button class="hj-faq-chip" data-filter="donor-guides">Donor Guides</button>
+      <button class="hj-faq-chip" data-filter="impact-updates">Impact Updates</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================
+     BLOG BODY
+============================================ -->
+<section class="hj-section">
+  <div class="hj-container">
+
+    <!-- FEATURED POST -->
+    <div class="hj-featured mb-5" data-aos="fade-up">
+      <div class="hj-featured-img">
+        <span class="hj-featured-badge">Featured Dispatch</span>
+        <img src="https://images.unsplash.com/photo-1541692641319-981cc79ee10a?w=900&h=700&fit=crop&auto=format" alt="Well construction in a drought-hit village">
+      </div>
+      <div class="hj-featured-body">
+        <div class="hj-post-meta"><span>Field Reports</span><span class="dot"></span><span>Aug 4, 2026</span><span class="dot"></span><span>6 min read</span></div>
+        <h2>Inside a Water Well Build: 12 Villages, One Summer</h2>
+        <p>Our field coordinator followed the drilling crew from site survey to first flow — here's what it actually takes to turn a donation into a working well, mile by mile.</p>
+        <a href="#" class="hj-read-link">Read the dispatch <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- POST GRID -->
+    <div class="row g-4" id="hjBlogGrid">
+
+      <div class="col-md-6 col-lg-4 hj-post-card-wrap" data-cat="transparency" data-aos="fade-up">
+        <div class="hj-post-card">
+          <div class="hj-post-img">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=420&fit=crop&auto=format" alt="Audit documents and ledger">
+            <span class="hj-post-tag">Transparency</span>
+          </div>
+          <div class="hj-post-body">
+            <div class="hj-post-meta"><span>Jul 28, 2026</span><span class="dot"></span><span>5 min read</span></div>
+            <h3>How We Audit Every NGO Partner, Step by Step</h3>
+            <p>A walk-through of the independent compliance review every field partner passes before a single dollar reaches them.</p>
+            <a href="#" class="hj-read-link">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 hj-post-card-wrap" data-cat="volunteer-stories" data-aos="fade-up" data-aos-delay="80">
+        <div class="hj-post-card">
+          <div class="hj-post-img">
+            <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=600&h=420&fit=crop&auto=format" alt="Mobile health clinic in action">
+            <span class="hj-post-tag">Volunteer Stories</span>
+          </div>
+          <div class="hj-post-body">
+            <div class="hj-post-meta"><span>Jul 21, 2026</span><span class="dot"></span><span>4 min read</span></div>
+            <h3>Volunteer Spotlight: Daniel Osei on Mobile Health Clinics</h3>
+            <p>Our medical volunteer on what a checkup day looks like in a community that's never had one before.</p>
+            <a href="#" class="hj-read-link">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 hj-post-card-wrap" data-cat="donor-guides" data-aos="fade-up" data-aos-delay="160">
+        <div class="hj-post-card">
+          <div class="hj-post-img">
+            <img src="https://images.unsplash.com/photo-1554774853-b415df9eeb92?w=600&h=420&fit=crop&auto=format" alt="Person reviewing charity information on a laptop">
+            <span class="hj-post-tag">Donor Guides</span>
+          </div>
+          <div class="hj-post-body">
+            <div class="hj-post-meta"><span>Jul 14, 2026</span><span class="dot"></span><span>7 min read</span></div>
+            <h3>5 Questions to Ask Before You Donate to Any Charity</h3>
+            <p>A donor's checklist for cutting through the marketing and finding out where a gift really goes.</p>
+            <a href="#" class="hj-read-link">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 hj-post-card-wrap" data-cat="impact-updates" data-aos="fade-up">
+        <div class="hj-post-card">
+          <div class="hj-post-img">
+            <img src="https://images.unsplash.com/photo-1618477388954-7852f32655ec?w=600&h=420&fit=crop&auto=format" alt="Flood relief distribution">
+            <span class="hj-post-tag">Impact Updates</span>
+          </div>
+          <div class="hj-post-body">
+            <div class="hj-post-meta"><span>Jul 9, 2026</span><span class="dot"></span><span>5 min read</span></div>
+            <h3>Flood Relief Fund: One Month Later</h3>
+            <p>Where the $19,800 raised in three weeks actually went, with receipts, in the communities that needed it most.</p>
+            <a href="#" class="hj-read-link">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 hj-post-card-wrap" data-cat="field-reports" data-aos="fade-up" data-aos-delay="80">
+        <div class="hj-post-card">
+          <div class="hj-post-img">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=420&fit=crop&auto=format" alt="Children receiving school supplies">
+            <span class="hj-post-tag">Field Reports</span>
+          </div>
+          <div class="hj-post-body">
+            <div class="hj-post-meta"><span>Jun 30, 2026</span><span class="dot"></span><span>4 min read</span></div>
+            <h3>Books &amp; Bags Day: A Photo Dispatch From 800 Doorsteps</h3>
+            <p>What it looked like when the new school-year kits finally reached the kids who'd been waiting for them.</p>
+            <a href="#" class="hj-read-link">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 hj-post-card-wrap" data-cat="transparency" data-aos="fade-up" data-aos-delay="160">
+        <div class="hj-post-card">
+          <div class="hj-post-img">
+            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&h=420&fit=crop&auto=format" alt="Child receiving a meal">
+            <span class="hj-post-tag">Transparency</span>
+          </div>
+          <div class="hj-post-body">
+            <div class="hj-post-meta"><span>Jun 22, 2026</span><span class="dot"></span><span>6 min read</span></div>
+            <h3>Where Does My Donation Actually Go? A Wallet-to-Doorstep Breakdown</h3>
+            <p>We traced a single $30 gift through every stage of its journey — here's the full receipt.</p>
+            <a href="#" class="hj-read-link">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 hj-post-card-wrap" data-cat="volunteer-stories" data-aos="fade-up">
+        <div class="hj-post-card">
+          <div class="hj-post-img">
+            <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=600&h=420&fit=crop&auto=format" alt="Volunteers loading a supply truck">
+            <span class="hj-post-tag">Volunteer Stories</span>
+          </div>
+          <div class="hj-post-body">
+            <div class="hj-post-meta"><span>Jun 15, 2026</span><span class="dot"></span><span>5 min read</span></div>
+            <h3>Meet the Field Coordinators Behind Our Meal Program</h3>
+            <p>Three coordinators on the logistics of getting 42,000 meals out the door — and back on the road — every single day.</p>
+            <a href="#" class="hj-read-link">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 hj-post-card-wrap" data-cat="donor-guides" data-aos="fade-up" data-aos-delay="80">
+        <div class="hj-post-card">
+          <div class="hj-post-img">
+            <img src="https://images.unsplash.com/photo-1594708767771-a7502209ff51?w=600&h=420&fit=crop&auto=format" alt="Elderly care visit">
+            <span class="hj-post-tag">Donor Guides</span>
+          </div>
+          <div class="hj-post-body">
+            <div class="hj-post-meta"><span>Jun 8, 2026</span><span class="dot"></span><span>4 min read</span></div>
+            <h3>Recurring vs. One-Time: Which Gift Fits Your Goals?</h3>
+            <p>A practical breakdown of how monthly and one-time donations move differently through our system — and which causes benefit most from each.</p>
+            <a href="#" class="hj-read-link">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 hj-post-card-wrap" data-cat="impact-updates" data-aos="fade-up" data-aos-delay="160">
+        <div class="hj-post-card">
+          <div class="hj-post-img">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&h=420&fit=crop&auto=format" alt="Community outreach event">
+            <span class="hj-post-tag">Impact Updates</span>
+          </div>
+          <div class="hj-post-body">
+            <div class="hj-post-meta"><span>May 30, 2026</span><span class="dot"></span><span>6 min read</span></div>
+            <h3>Year in Review: 184,000 Meals and What We Learned</h3>
+            <p>A candid look back at what worked, what we changed, and where the next 40 countries of growth are headed.</p>
+            <a href="#" class="hj-read-link">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hj-blog-empty" id="hjBlogEmpty">
+        <i class="bi bi-mailbox2"></i>
+        <div>No dispatches matched your search. Try a different word, or browse all topics above.</div>
+      </div>
+
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="hj-blog-newsletter" data-aos="zoom-in">
+      <h3>Get the next dispatch in your inbox</h3>
+      <p>One email a month — field reports and transparency updates, no spam, unsubscribe anytime.</p>
+      <form onsubmit="return false;">
+        <input type="email" placeholder="Your email address" aria-label="Email for blog newsletter" required>
+        <button type="submit"><i class="bi bi-arrow-right"></i></button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+============================================ -->
+<footer class="hj-footer">
+  <div class="hj-container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <a class="hj-logo" href="index-2.html" style="color:#fff;">
+          <span class="hj-logo-mark"><i class="bi bi-heart-fill"></i></span>
+          Hope<span class="dot" style="color:var(--hj-gold);">well</span>
+        </a>
+        <p class="mt-3">A transparent, donor-first charity connecting givers directly to verified causes worldwide since 2013. Every gift is tracked from wallet to doorstep.</p>
+        <div class="hj-footer-social">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+        <div class="hj-footer-badges">
+          <span class="hj-footer-badge"><i class="bi bi-patch-check-fill"></i> Registered 501(c)(3)</span>
+          <span class="hj-footer-badge"><i class="bi bi-shield-lock-fill"></i> SSL Secured</span>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3 col-lg-2">
+        <h6>Quick Links</h6>
+        <ul>
+          <li><a class="hj-footer-link" href="index-2.html#about"><i class="bi bi-caret-right-fill"></i>About Us</a></li>
+          <li><a class="hj-footer-link" href="index-2.html#causes"><i class="bi bi-caret-right-fill"></i>Causes</a></li>
+          <li><a class="hj-footer-link" href="index-2.html#why"><i class="bi bi-caret-right-fill"></i>Why Hopewell</a></li>
+          <li><a class="hj-footer-link" href="index-2.html#volunteers"><i class="bi bi-caret-right-fill"></i>Volunteers</a></li>
+          <li><a class="hj-footer-link" href="blog.html"><i class="bi bi-caret-right-fill"></i>Blog</a></li>
+          <li><a class="hj-footer-link" href="index-2.html#contact"><i class="bi bi-caret-right-fill"></i>Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-3 col-lg-2">
+        <h6>Legal</h6>
+        <ul>
+          <li><a class="hj-footer-link" href="terms-and-conditions.html"><i class="bi bi-caret-right-fill"></i>Terms &amp; Conditions</a></li>
+          <li><a class="hj-footer-link" href="privacy-policy.html"><i class="bi bi-caret-right-fill"></i>Privacy Policy</a></li>
+          <li><a class="hj-footer-link" href="financial-reports.html"><i class="bi bi-caret-right-fill"></i>Financial Reports</a></li>
+          <li><a class="hj-footer-link" href="faq.html"><i class="bi bi-caret-right-fill"></i>FAQs</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <h6>Get In Touch</h6>
+        <div class="hj-footer-link mb-2"><i class="bi bi-geo-alt-fill"></i> 221 Riverside Lane, Austin, TX 78701</div>
+        <div class="hj-footer-link mb-2"><i class="bi bi-envelope-fill"></i> hello@hopewell.org</div>
+        <div class="hj-footer-link mb-2"><i class="bi bi-telephone-fill"></i> +1 (555) 204-8890</div>
+        <h6 class="mt-4">Newsletter</h6>
+        <div class="hj-newsletter">
+          <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+          <button type="button" aria-label="Subscribe"><i class="bi bi-arrow-right"></i></button>
+        </div>
+        <div class="hj-footer-link mt-2" style="font-size:.76rem;"><i class="bi bi-shield-check"></i> No spam. Unsubscribe anytime.</div>
+      </div>
+    </div>
+
+    <div class="hj-footer-divider"></div>
+    <div class="hj-footer-bottom">
+      <div>
+        <div>&copy; 2026 Hopewell Foundation. All rights reserved by <a href="https://www.templatemonster.com/authors/k29solutions/" target="_blank" rel="noopener noreferrer">K29Solutions</a>.</div>
+        <div class="mt-2">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-and-conditions.html">Terms of Service</a>
+          <a href="financial-reports.html">Financial Reports</a>
+          <a href="faq.html">FAQs</a>
+        </div>
+      </div>
+      <div class="text-md-end">
+        <div class="mb-2"><i class="bi bi-credit-card-2-front me-2"></i><i class="bi bi-paypal me-2"></i><i class="bi bi-google me-2"></i><i class="bi bi-apple"></i></div>
+        <div>Made with <i class="bi bi-heart-fill" style="color:var(--hj-gold);"></i> for a better world</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================
+     SCROLL TO TOP
+============================================ -->
+<div id="hj-scrolltop" role="button" aria-label="Scroll to top" tabindex="0"><i class="bi bi-arrow-up"></i></div>
+
+<!-- Bootstrap Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>

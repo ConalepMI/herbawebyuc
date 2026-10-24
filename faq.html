@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Bootstrap (layout grid only) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<link href="assets/style.css" rel="stylesheet">
+
+<title>FAQs — Hopewell</title>
+<meta name="description" content="Answers to common questions about donating, tax receipts, volunteering, and how Hopewell verifies causes.">
+
+
+</head>
+<body>
+
+<!-- ============================================
+     PRELOADER
+============================================ -->
+<div id="hj-preloader" aria-hidden="true">
+  <div class="hj-stamp-ring"><i class="bi bi-question-lg"></i></div>
+  <div class="hj-preload-text">Looking up your answer&hellip;</div>
+</div>
+
+<!-- ============================================
+     NAVBAR
+============================================ -->
+<nav class="hj-nav">
+  <div class="hj-container hj-nav-inner">
+    <a class="hj-logo" href="index-2.html">
+      <span class="hj-logo-mark"><i class="bi bi-heart-fill"></i></span>
+      Hope<span class="dot">well</span>
+    </a>
+    <button class="hj-nav-toggle" id="hjNavToggle" aria-label="Toggle navigation"><i class="bi bi-list"></i></button>
+    <ul class="hj-nav-links" id="hjNavLinks">
+      <li><a href="index-2.html#home">Home</a></li>
+      <li><a href="index-2.html#about">About</a></li>
+      <li><a href="index-2.html#causes">Causes</a></li>
+      <li><a href="index-2.html#volunteers">Volunteers</a></li>
+      <li><a href="index-2.html#contact">Contact</a></li>
+    </ul>
+    <a href="index-2.html#causes" class="hj-btn hj-btn-primary hj-nav-cta">Donate Now <i class="bi bi-arrow-right"></i></a>
+  </div>
+</nav>
+
+<!-- ============================================
+     DOC HERO
+============================================ -->
+<header class="hj-doc-hero">
+  <div class="hj-container">
+    <span class="hj-eyebrow"><i class="bi bi-question-diamond-fill"></i> Doc No. HW&#8209;FAQ&#8209;2026</span>
+    <h1 class="hj-h1 mt-4" style="font-size:clamp(2rem,4vw,3rem);">Frequently Asked Questions</h1>
+    <p class="hj-lede mt-3">Everything donors, volunteers, and NGO partners ask us most — organized like a lookup ledger so you can find your answer fast.</p>
+    <div class="hj-faq-search">
+      <i class="bi bi-search"></i>
+      <input type="text" id="hjFaqSearch" placeholder="Search a question, e.g. &ldquo;tax receipt&rdquo;" aria-label="Search FAQs">
+    </div>
+    <div class="hj-faq-chips" id="hjFaqChips">
+      <button class="hj-faq-chip hj-active" data-filter="all">All Topics</button>
+      <button class="hj-faq-chip" data-filter="donations">Donations</button>
+      <button class="hj-faq-chip" data-filter="tax">Tax &amp; Receipts</button>
+      <button class="hj-faq-chip" data-filter="account">Account &amp; Security</button>
+      <button class="hj-faq-chip" data-filter="causes">Causes &amp; Verification</button>
+      <button class="hj-faq-chip" data-filter="volunteering">Volunteering</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================
+     FAQ BODY
+============================================ -->
+<section class="hj-section">
+  <div class="hj-container">
+
+    <div class="hj-faq-empty" id="hjFaqEmpty">
+      <i class="bi bi-mailbox2"></i>
+      <div>No questions matched your search. Try a different word, or <a href="index-2.html#contact" style="color:var(--hj-gold-deep);font-weight:600;text-decoration:underline;">contact us</a> directly.</div>
+    </div>
+
+    <!-- DONATIONS -->
+    <div class="hj-faq-group" data-group="donations" id="grp-donations" data-aos="fade-up">
+      <div class="hj-faq-group-head">
+        <div class="hj-faq-group-ic"><i class="bi bi-heart-fill"></i></div>
+        <h2>Donations</h2>
+      </div>
+
+      <div class="hj-faq-item" data-cat="donations">
+        <button class="hj-faq-q" aria-expanded="true" aria-controls="faq-1"><span class="hj-faq-q-text">How do I make a one-time or monthly donation?</span><span class="hj-faq-q-mark"><i class="bi bi-plus-lg"></i></span></button>
+        <div class="hj-faq-a" id="faq-1"><p>Pick a cause from the Causes section, choose one-time or monthly, and complete checkout through our encrypted, PCI-compliant payment form. You'll get an emailed receipt within minutes, and monthly gifts renew automatically until you cancel.</p></div>
+      </div>
+      <div class="hj-faq-item" data-cat="donations">
+        <button class="hj-faq-q" aria-expanded="false" aria-controls="faq-2"><span class="hj-faq-q-text">What payment methods do you accept?</span><span class="hj-faq-q-mark"><i class="bi bi-plus-lg"></i></span></button>
+        <div class="hj-faq-a" id="faq-2"><p>We accept major credit and debit cards, PayPal, Google Pay, and Apple Pay. All transactions are processed through PCI-DSS-compliant payment partners.</p></div>
+      </div>
+      <div class="hj-faq-item" data-cat="donations">
+        <button class="hj-faq-q" aria-expanded="false" aria-controls="faq-3"><span class="hj-faq-q-text">Can I cancel or change a recurring donation?</span><span class="hj-faq-q-mark"><i class="bi bi-plus-lg"></i></span></button>
+        <div class="hj-faq-a" id="faq-3"><p>Yes — log into your donor account and adjust or cancel your recurring gift anytime, or email <strong style="color:var(--hj-ink);">hello@hopewell.org</strong> and we'll handle it for you within one business day.</p></div>
+      </div>
+      <div class="hj-faq-item" data-cat="donations">
+        <button class="hj-faq-q" aria-expanded="false" aria-controls="faq-4"><span class="hj-faq-q-text">Is there a minimum donation amount?</span><span class="hj-faq-q-mark"><i class="bi bi-plus-lg"></i></span></button>
+        <div class="hj-faq-a" id="faq-4"><p>No minimum — every gift, however small, is tracked and applied in full to the cause you choose.</p></div>
+      </div>
+      <div class="hj-faq-item" data-cat="donations">
+        <button class="hj-faq-q" aria-expanded="false" aria-controls="faq-5"><span class="hj-faq-q-text">Can I request a refund?</span><span class="hj-faq-q-mark"><i class="bi bi-plus-lg"></i></span></button>
+        <div class="hj-faq-a" id="faq-5"><p>If a charge was made in error, contact us within 14 days and we'll review it. Once funds have shipped to a field partner, refunds are reviewed case by case — see our <a href="terms-and-conditions.html#refunds" style="color:var(--hj-gold-deep);font-weight:600;text-decoration:underline;">Terms &amp; Conditions</a> for details.</p></div>
+      </div>
+    </div>
+
+    <!-- TAX & RECEIPTS -->
+    <div class="hj-faq-group" data-group="tax" id="grp-tax" data-aos="fade-up">
+      <div class="hj-faq-group-head">
+        <div class="hj-faq-group-ic"><i class="bi bi-file-earmark-text-fill"></i></div>
+        <h2>Tax &amp; Receipts</h2>
+      </div>
+
+      <div class="hj-faq-item" data-cat="tax">
+        <button class="hj-faq-q" aria-expanded="false" aria-controls="faq-6"><span class="hj-faq-q-text">Will I get a tax-deductible receipt?</span><span class="hj-faq-q-mark"><i class="bi bi-plus-lg"></i></span></button>
+        <div class="hj-faq-a" id="faq-6"><p>Yes. Hopewell is a registered 501(c)(3) nonprofit, and an electronic receipt is generated automatically the moment your donation is confirmed. Consult your tax advisor on your specific eligibility.</p></div>
+      </div>
+      <div class="hj-faq-item" data-cat="tax">
+        <button class="hj-faq-q" aria-expanded="false" aria-controls="faq-7"><span class="hj-faq-q-text">I lost my receipt — can I get another copy?</span><span class="hj-faq-q-mark"><i class="bi bi-plus-lg"></i></span></button>
+        <div class="hj-faq-a" id="faq-7"><p>Every receipt is stored in your donor account under "Donation History," downloadable as a PDF anytime. You can also request a resend to your registered email.</p></div>
+      </div>
+      <div class="hj-faq-item" data-cat="tax">
+        <button class="hj-faq-q" aria-expanded="false" aria-controls="faq-8"><span class="hj-faq-q-text">Do you provide an annual giving summary?</span><span class="hj-faq-q-mark"><i class="bi bi-plus-lg"></i></span></button>
+        <div class="hj-faq-a" id="faq-8"><p>Yes — a consolidated annual summary of all your donations is emailed each January, ahead of tax season.</p></div>
+      </div>
+    </div>
+
+    <!-- ACCOUNT & SECURITY -->
+    <div class="hj-faq-group" data-group="account" id="grp-account" data-aos="fade-up">
+      <div class="hj-faq-group-head">
+        <div class="hj-faq-group-ic"><i class="bi bi-shield-lock-fill"></i></div>
+        <h2>Account &amp; Security</h2>
+      </div>
+
+      <div class="hj-faq-item" data-cat="account">
+        <button class="hj-faq-q" aria-expanded="false" aria-controls="faq-9"><span class="hj-faq-q-text">Is my payment information secure?</span><span class="hj-faq-q-mark"><i class="bi bi-plus-lg"></i></span></button>
+        <div class="hj-faq-a" id="faq-9"><p>Yes. All checkout traffic is SSL-encrypted, and full card numbers are never stored on Hopewell's own servers — only a secure token from our PCI-compliant payment processor.</p></div>
+      </div>
+      <div class="hj-faq-item" data-cat="account">
+        <button class="hj-faq-q" aria-expanded="false" aria-controls="faq-10"><span class="hj-faq-q-text">How do I reset my password?</span><span class="hj-faq-q-mark"><i class="bi bi-plus-lg"></i></span></button>
+        <div class="hj-faq-a" id="faq-10"><p>Use the "Forgot password" link on the account sign-in page — you'll receive a secure reset link by email within a few minutes.</p></div>
+      </div>
+      <div class="hj-faq-item" data-cat="account">
+        <button class="hj-faq-q" aria-expanded="false" aria-controls="faq-11"><span class="hj-faq-q-text">How do I close my donor account?</span><span class="hj-faq-q-mark"><i class="bi bi-plus-lg"></i></span></button>
+        <div class="hj-faq-a" id="faq-11"><p>Email <strong style="color:var(--hj-ink);">hello@hopewell.org</strong> and we'll close your account. Past donation and tax records are retained as required by law even after closure.</p></div>
+      </div>
+    </div>
+
+    <!-- CAUSES & VERIFICATION -->
+    <div class="hj-faq-group" data-group="causes" id="grp-causes" data-aos="fade-up">
+      <div class="hj-faq-group-head">
+        <div class="hj-faq-group-ic"><i class="bi bi-patch-check-fill"></i></div>
+        <h2>Causes &amp; Verification</h2>
+      </div>
+
+      <div class="hj-faq-item" data-cat="causes">
+        <button class="hj-faq-q" aria-expanded="false" aria-controls="faq-12"><span class="hj-faq-q-text">How are NGO partners verified?</span><span class="hj-faq-q-mark"><i class="bi bi-plus-lg"></i></span></button>
+        <div class="hj-faq-a" id="faq-12"><p>Every partner organization passes an independent annual compliance audit covering financial controls, program delivery, and safeguarding practices before receiving funds through Hopewell.</p></div>
+      </div>
+      <div class="hj-faq-item" data-cat="causes">
+        <button class="hj-faq-q" aria-expanded="false" aria-controls="faq-13"><span class="hj-faq-q-text">Can I see where my specific donation went?</span><span class="hj-faq-q-mark"><i class="bi bi-plus-lg"></i></span></button>
+        <div class="hj-faq-a" id="faq-13"><p>Yes — your donor dashboard shows real disbursement updates and photos tied to the campaign you supported, tracked from wallet to warehouse to doorstep.</p></div>
+      </div>
+      <div class="hj-faq-item" data-cat="causes">
+        <button class="hj-faq-q" aria-expanded="false" aria-controls="faq-14"><span class="hj-faq-q-text">What happens if a campaign is fully funded?</span><span class="hj-faq-q-mark"><i class="bi bi-plus-lg"></i></span></button>
+        <div class="hj-faq-a" id="faq-14"><p>Once a campaign reaches its goal, it closes to new gifts and moves into delivery. Any surplus is redirected to the next related campaign in that same cause category, disclosed on the campaign page.</p></div>
+      </div>
+    </div>
+
+    <!-- VOLUNTEERING -->
+    <div class="hj-faq-group" data-group="volunteering" id="grp-volunteering">
+      <div class="hj-faq-group-head">
+        <div class="hj-faq-group-ic"><i class="bi bi-people-fill"></i></div>
+        <h2>Volunteering</h2>
+      </div>
+
+      <div class="hj-faq-item" data-cat="volunteering">
+        <button class="hj-faq-q" aria-expanded="false" aria-controls="faq-15"><span class="hj-faq-q-text">How do I become a Hopewell volunteer?</span><span class="hj-faq-q-mark"><i class="bi bi-plus-lg"></i></span></button>
+        <div class="hj-faq-a" id="faq-15"><p>Register your interest from the Volunteers section. Placement depends on background checks, local partner capacity, and the skills needed on the ground at the time.</p></div>
+      </div>
+      <div class="hj-faq-item" data-cat="volunteering">
+        <button class="hj-faq-q" aria-expanded="false" aria-controls="faq-16"><span class="hj-faq-q-text">Do volunteers need to travel internationally?</span><span class="hj-faq-q-mark"><i class="bi bi-plus-lg"></i></span></button>
+        <div class="hj-faq-a" id="faq-16"><p>Not always — we run remote outreach and logistics roles alongside on-the-ground field placements across our 40 partner countries.</p></div>
+      </div>
+      <div class="hj-faq-item" data-cat="volunteering">
+        <button class="hj-faq-q" aria-expanded="false" aria-controls="faq-17"><span class="hj-faq-q-text">Is volunteering paid or unpaid?</span><span class="hj-faq-q-mark"><i class="bi bi-plus-lg"></i></span></button>
+        <div class="hj-faq-a" id="faq-17"><p>Hopewell volunteer roles are unpaid. Field coordinators provide safety briefings, and select field placements include travel and lodging support — details are shared during onboarding.</p></div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="hj-faq-cta" data-aos="zoom-in">
+      <div>
+        <h3>Still need an answer?</h3>
+        <p>Our donor support team replies within 24 hours, every day of the week.</p>
+      </div>
+      <a href="index-2.html#contact" class="hj-btn hj-btn-gold">Contact Support <i class="bi bi-arrow-right"></i></a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+============================================ -->
+<footer class="hj-footer">
+  <div class="hj-container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <a class="hj-logo" href="index-2.html" style="color:#fff;">
+          <span class="hj-logo-mark"><i class="bi bi-heart-fill"></i></span>
+          Hope<span class="dot" style="color:var(--hj-gold);">well</span>
+        </a>
+        <p class="mt-3">A transparent, donor-first charity connecting givers directly to verified causes worldwide since 2013. Every gift is tracked from wallet to doorstep.</p>
+        <div class="hj-footer-social">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+        <div class="hj-footer-badges">
+          <span class="hj-footer-badge"><i class="bi bi-patch-check-fill"></i> Registered 501(c)(3)</span>
+          <span class="hj-footer-badge"><i class="bi bi-shield-lock-fill"></i> SSL Secured</span>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3 col-lg-2">
+        <h6>Quick Links</h6>
+        <ul>
+          <li><a class="hj-footer-link" href="index-2.html#about"><i class="bi bi-caret-right-fill"></i>About Us</a></li>
+          <li><a class="hj-footer-link" href="index-2.html#causes"><i class="bi bi-caret-right-fill"></i>Causes</a></li>
+          <li><a class="hj-footer-link" href="index-2.html#why"><i class="bi bi-caret-right-fill"></i>Why Hopewell</a></li>
+          <li><a class="hj-footer-link" href="index-2.html#volunteers"><i class="bi bi-caret-right-fill"></i>Volunteers</a></li>
+          <li><a class="hj-footer-link" href="index-2.html#testimonials"><i class="bi bi-caret-right-fill"></i>Testimonials</a></li>
+          <li><a class="hj-footer-link" href="index-2.html#contact"><i class="bi bi-caret-right-fill"></i>Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-3 col-lg-2">
+        <h6>Legal</h6>
+        <ul>
+          <li><a class="hj-footer-link" href="terms-and-conditions.html"><i class="bi bi-caret-right-fill"></i>Terms &amp; Conditions</a></li>
+          <li><a class="hj-footer-link" href="privacy-policy.html"><i class="bi bi-caret-right-fill"></i>Privacy Policy</a></li>
+          <li><a class="hj-footer-link" href="financial-reports.html"><i class="bi bi-caret-right-fill"></i>Financial Reports</a></li>
+          <li><a class="hj-footer-link" href="faq.html"><i class="bi bi-caret-right-fill"></i>FAQs</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <h6>Get In Touch</h6>
+        <div class="hj-footer-link mb-2"><i class="bi bi-geo-alt-fill"></i> 221 Riverside Lane, Austin, TX 78701</div>
+        <div class="hj-footer-link mb-2"><i class="bi bi-envelope-fill"></i> hello@hopewell.org</div>
+        <div class="hj-footer-link mb-2"><i class="bi bi-telephone-fill"></i> +1 (555) 204-8890</div>
+        <h6 class="mt-4">Newsletter</h6>
+        <div class="hj-newsletter">
+          <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+          <button type="button" aria-label="Subscribe"><i class="bi bi-arrow-right"></i></button>
+        </div>
+        <div class="hj-footer-link mt-2" style="font-size:.76rem;"><i class="bi bi-shield-check"></i> No spam. Unsubscribe anytime.</div>
+      </div>
+    </div>
+
+    <div class="hj-footer-divider"></div>
+    <div class="hj-footer-bottom">
+      <div>
+        <div>&copy; 2026 Hopewell Foundation. All rights reserved by <a href="https://www.templatemonster.com/authors/k29solutions/" target="_blank" rel="noopener noreferrer">K29Solutions</a>.</div>
+        <div class="mt-2">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-and-conditions.html">Terms of Service</a>
+          <a href="financial-reports.html">Financial Reports</a>
+          <a href="faq.html">FAQs</a>
+        </div>
+      </div>
+      <div class="text-md-end">
+        <div class="mb-2"><i class="bi bi-credit-card-2-front me-2"></i><i class="bi bi-paypal me-2"></i><i class="bi bi-google me-2"></i><i class="bi bi-apple"></i></div>
+        <div>Made with <i class="bi bi-heart-fill" style="color:var(--hj-gold);"></i> for a better world</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================
+     SCROLL TO TOP
+============================================ -->
+<div id="hj-scrolltop" role="button" aria-label="Scroll to top" tabindex="0"><i class="bi bi-arrow-up"></i></div>
+
+<!-- Bootstrap Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>

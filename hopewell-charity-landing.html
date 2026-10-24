@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hopewell — Charity Bootstrap Theme, Two Ways</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
+  /* ============ Design tokens ============ */
+  :root{
+    --ink:#17211F;
+    --ink-soft:#4A564F;
+    --paper:#FBF8F1;
+    --paper-raised:#FFFFFF;
+    --gold:#D9A441;
+    --gold-deep:#B9832E;
+    --teal:#0F3D3E;
+    --coral:#C1502E;
+    --line:rgba(23,33,31,0.12);
+    --line-soft:rgba(23,33,31,0.07);
+    --radius:18px;
+    --shadow-lg:0 30px 60px -25px rgba(15,61,62,0.35);
+    --shadow-sm:0 10px 24px -16px rgba(23,33,31,0.35);
+
+    /* live demo palette — starts on Sunrise, swapped by JS */
+    --demo-primary:#E8792C;
+    --demo-primary-deep:#C85E19;
+    --demo-secondary:#F4A93B;
+    --demo-bg:#FFF8EE;
+    --demo-surface:#FFFFFF;
+    --demo-text:#2B1B12;
+    --demo-text-soft:#7A5E4C;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter',sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
+  .font-display{font-family:'Fraunces',serif;}
+  .font-mono{font-family:'JetBrains Mono',monospace;}
+
+  a{text-decoration:none;}
+  ::selection{background:var(--gold); color:var(--ink);}
+
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.72rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--teal);
+    display:inline-flex;
+    align-items:center;
+    gap:.5rem;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px;height:1px;
+    background:var(--coral);
+    display:inline-block;
+  }
+
+  .btn-hope{
+    background:var(--teal);
+    color:var(--paper);
+    border-radius:999px;
+    padding:.85rem 1.7rem;
+    font-weight:600;
+    font-size:.95rem;
+    border:1px solid var(--teal);
+    transition:transform .25s ease, background .25s ease, box-shadow .25s ease;
+    display:inline-flex;
+    align-items:center;
+    gap:.55rem;
+  }
+  .btn-hope:hover{
+    background:#0a2b2c;
+    transform:translateY(-2px);
+    box-shadow:var(--shadow-sm);
+    color:var(--paper);
+  }
+  .btn-hope-outline{
+    background:transparent;
+    color:var(--ink);
+    border-radius:999px;
+    padding:.83rem 1.6rem;
+    font-weight:600;
+    font-size:.95rem;
+    border:1px solid var(--line);
+    transition:border-color .25s ease, transform .25s ease;
+    display:inline-flex;
+    align-items:center;
+    gap:.55rem;
+  }
+  .btn-hope-outline:hover{
+    border-color:var(--ink);
+    transform:translateY(-2px);
+    color:var(--ink);
+  }
+
+  /* ============ Nav ============ */
+  .site-nav{
+    position:sticky; top:0; z-index:1000;
+    background:rgba(251,248,241,0.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .brand-mark{
+    width:38px;height:38px;border-radius:10px;
+    background:linear-gradient(135deg,var(--gold) 0%, var(--coral) 100%);
+    display:inline-flex; align-items:center; justify-content:center;
+    color:#fff; font-family:'Fraunces',serif; font-weight:700; font-size:1.1rem;
+  }
+  .brand-name{font-family:'Fraunces',serif; font-weight:600; font-size:1.15rem; color:var(--ink);}
+  .nav-link-hope{
+    font-size:.92rem; font-weight:500; color:var(--ink-soft);
+    padding:.4rem .2rem; position:relative;
+  }
+  .nav-link-hope:hover{color:var(--ink);}
+
+  /* ============ Hero ============ */
+  .hero-section{
+    padding:6rem 0 4rem;
+    background:
+      radial-gradient(1100px 500px at 85% -10%, rgba(217,164,65,0.18), transparent 60%),
+      radial-gradient(900px 500px at -10% 30%, rgba(15,61,62,0.10), transparent 60%);
+  }
+  .hero-title{
+    font-size:clamp(2.5rem, 4.6vw, 4.1rem);
+    line-height:1.04;
+    font-weight:600;
+    letter-spacing:-.01em;
+  }
+  .hero-title em{
+    font-style:italic;
+    color:var(--coral);
+  }
+  .hero-sub{
+    font-size:1.1rem;
+    color:var(--ink-soft);
+    max-width:34rem;
+    line-height:1.65;
+  }
+  .spec-chip{
+    font-family:'JetBrains Mono',monospace;
+    font-size:.74rem;
+    letter-spacing:.02em;
+    color:var(--ink);
+    background:var(--paper-raised);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:.4rem .7rem;
+    display:inline-flex;
+    align-items:center;
+    gap:.4rem;
+  }
+  .spec-chip i{color:var(--coral); font-size:.85rem;}
+
+  /* ---- live theme toggle ---- */
+  .theme-switcher{
+    display:inline-flex;
+    background:var(--paper-raised);
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:5px;
+    position:relative;
+    gap:2px;
+  }
+  .theme-switcher .switch-pill{
+    position:absolute;
+    top:5px; bottom:5px; left:5px;
+    width:calc(50% - 5px);
+    background:var(--ink);
+    border-radius:999px;
+    transition:transform .35s cubic-bezier(.65,0,.35,1);
+    z-index:0;
+  }
+  .theme-switcher.state-harbor .switch-pill{transform:translateX(100%);}
+  .theme-switcher button{
+    position:relative; z-index:1;
+    border:none; background:transparent;
+    font-family:'JetBrains Mono',monospace;
+    font-size:.78rem; font-weight:600;
+    padding:.55rem 1.1rem;
+    border-radius:999px;
+    color:var(--ink-soft);
+    transition:color .3s ease;
+    display:flex; align-items:center; gap:.4rem;
+  }
+  .theme-switcher button.active{color:#fff;}
+  .theme-switcher .dot{width:8px;height:8px;border-radius:50%; display:inline-block;}
+  .dot-sunrise{background:#E8792C;}
+  .dot-harbor{background:#1C6E6A;}
+
+  /* ---- browser mockup (the signature element) ---- */
+  .browser-mock{
+    background:var(--demo-surface);
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:var(--shadow-lg);
+    border:1px solid var(--line);
+    transition:background .4s ease;
+  }
+  .browser-chrome{
+    background:#eee9de;
+    padding:.6rem .85rem;
+    display:flex; align-items:center; gap:.5rem;
+    border-bottom:1px solid var(--line-soft);
+  }
+  .chrome-dot{width:9px;height:9px;border-radius:50%; background:#d3cabb;}
+  .chrome-url{
+    font-family:'JetBrains Mono',monospace;
+    font-size:.68rem; color:#8a8074;
+    background:#fff; border-radius:6px;
+    padding:.25rem .6rem; margin-left:.5rem;
+    flex:1;
+  }
+  .demo-body{
+    background:var(--demo-bg);
+    padding:1.4rem;
+    transition:background .4s ease;
+  }
+  .demo-nav{
+    display:flex; align-items:center; justify-content:space-between;
+    margin-bottom:1.3rem;
+  }
+  .demo-logo{
+    width:22px;height:22px;border-radius:6px;
+    background:var(--demo-primary);
+    transition:background .4s ease;
+  }
+  .demo-navlinks span{
+    display:inline-block; width:34px; height:6px; border-radius:4px;
+    background:var(--demo-text-soft); opacity:.35; margin-left:8px;
+  }
+  .demo-cta{
+    font-family:'JetBrains Mono',monospace;
+    font-size:.62rem; font-weight:600;
+    background:var(--demo-primary);
+    color:#fff; border-radius:999px;
+    padding:.3rem .65rem;
+    transition:background .4s ease;
+  }
+  .demo-hero{
+    display:grid; grid-template-columns:1.1fr .9fr; gap:1.1rem;
+    align-items:center; margin-bottom:1.3rem;
+  }
+  .demo-headline-bar{height:13px; border-radius:5px; background:var(--demo-text); opacity:.85; margin-bottom:.5rem; transition:background .4s ease;}
+  .demo-headline-bar.short{width:70%;}
+  .demo-text-bar{height:7px; border-radius:4px; background:var(--demo-text-soft); opacity:.5; margin-bottom:.4rem;}
+  .demo-text-bar.w1{width:92%;} .demo-text-bar.w2{width:76%;}
+  .demo-btn-row{display:flex; gap:.5rem; margin-top:.8rem;}
+  .demo-btn-primary{
+    font-family:'JetBrains Mono',monospace; font-size:.62rem; font-weight:600;
+    background:var(--demo-primary); color:#fff; border-radius:8px; padding:.4rem .8rem;
+    transition:background .4s ease;
+  }
+  .demo-btn-ghost{
+    font-family:'JetBrains Mono',monospace; font-size:.62rem; font-weight:600;
+    border:1px solid var(--demo-text-soft); color:var(--demo-text); border-radius:8px; padding:.4rem .8rem;
+    opacity:.7;
+  }
+  .demo-hero-art{
+    height:100px; border-radius:12px;
+    background:linear-gradient(135deg, var(--demo-primary), var(--demo-secondary));
+    transition:background .4s ease;
+    position:relative; overflow:hidden;
+  }
+  .demo-hero-art::after{
+    content:"";
+    position:absolute; inset:0;
+    background:radial-gradient(circle at 30% 30%, rgba(255,255,255,.35), transparent 55%);
+  }
+  .demo-stats{display:flex; gap:.6rem;}
+  .demo-stat{
+    flex:1; background:var(--demo-surface); border:1px solid rgba(0,0,0,.06);
+    border-radius:10px; padding:.6rem .7rem;
+  }
+  .demo-stat b{display:block; font-size:.85rem; color:var(--demo-primary); transition:color .4s ease;}
+  .demo-stat span{font-size:.6rem; color:var(--demo-text-soft); text-transform:uppercase; letter-spacing:.04em;}
+
+  /* ============ ticker strip ============ */
+  .ticker-strip{
+    background:var(--teal);
+    color:var(--paper);
+    padding:.85rem 0;
+    overflow:hidden;
+    white-space:nowrap;
+  }
+  .ticker-track{
+    display:inline-flex;
+    animation:tickerScroll 26s linear infinite;
+  }
+  .ticker-track span{
+    font-family:'JetBrains Mono',monospace;
+    font-size:.8rem;
+    letter-spacing:.04em;
+    padding:0 1.6rem;
+    display:inline-flex; align-items:center; gap:.6rem;
+    opacity:.9;
+  }
+  .ticker-track span i{color:var(--gold); font-size:.7rem;}
+  @keyframes tickerScroll{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
+  }
+
+  /* ============ features ============ */
+  .section-pad{padding:5.5rem 0;}
+  .section-head{max-width:38rem;}
+  .section-title{
+    font-size:clamp(2rem, 3vw, 2.7rem);
+    font-weight:600;
+    line-height:1.12;
+  }
+  .feature-card{
+    background:var(--paper-raised);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:1.9rem;
+    height:100%;
+    transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  }
+  .feature-card:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow-sm);
+    border-color:transparent;
+  }
+  .feature-icon{
+    width:46px; height:46px; border-radius:12px;
+    display:flex; align-items:center; justify-content:center;
+    background:rgba(217,164,65,0.16);
+    color:var(--gold-deep);
+    font-size:1.25rem;
+    margin-bottom:1.1rem;
+  }
+  .feature-card h3{
+    font-family:'Fraunces',serif; font-weight:600; font-size:1.15rem; margin-bottom:.5rem;
+  }
+  .feature-card p{color:var(--ink-soft); font-size:.92rem; line-height:1.6; margin:0;}
+
+  /* ============ two style boxes ============ */
+  .style-band{
+    background:var(--teal);
+    color:var(--paper);
+  }
+  .style-band .section-head .eyebrow{color:var(--gold);}
+  .style-band .eyebrow::before{background:var(--gold);}
+  .style-band .section-title{color:#fff;}
+  .style-band .section-lead{color:rgba(251,248,241,.72);}
+
+  .style-card{
+    background:#0c3233;
+    border:1px solid rgba(251,248,241,0.12);
+    border-radius:22px;
+    padding:1.6rem;
+    height:100%;
+    transition:transform .35s ease, border-color .35s ease;
+  }
+  .style-card:hover{transform:translateY(-6px); border-color:rgba(251,248,241,0.3);}
+  .style-card .browser-mock{margin-bottom:1.4rem;}
+  .style-card h3{
+    font-family:'Fraunces',serif; font-size:1.5rem; font-weight:600; color:#fff; margin-bottom:.3rem;
+  }
+  .style-card .style-tag{
+    font-family:'JetBrains Mono',monospace; font-size:.7rem; letter-spacing:.06em;
+    color:var(--gold); text-transform:uppercase; margin-bottom:.7rem; display:block;
+  }
+  .style-card p.desc{color:rgba(251,248,241,.68); font-size:.92rem; line-height:1.6;}
+  .style-swatches{display:flex; gap:.4rem; margin:1rem 0 1.3rem;}
+  .swatch{width:26px; height:26px; border-radius:8px; border:2px solid rgba(255,255,255,.25);}
+  .style-card .btn-preview{
+    width:100%; justify-content:center;
+    background:var(--gold); color:var(--ink); border:none;
+    border-radius:999px; padding:.75rem 1rem; font-weight:600; font-size:.9rem;
+    display:flex; align-items:center; gap:.5rem;
+    transition:background .25s ease, transform .25s ease;
+  }
+  .style-card .btn-preview:hover{background:#fff; transform:translateY(-2px);}
+
+  /* ============ pages included ============ */
+  .page-pill{
+    background:var(--paper-raised);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:.9rem 1.1rem;
+    display:flex; align-items:center; gap:.7rem;
+    font-size:.9rem; font-weight:500;
+    height:100%;
+  }
+  .page-pill i{color:var(--coral);}
+
+  /* ============ cta ============ */
+  .cta-band{
+    background:linear-gradient(135deg, #fff 0%, #fbeed7 100%);
+    border:1px solid var(--line);
+    border-radius:28px;
+    padding:3.5rem;
+    position:relative;
+    overflow:hidden;
+  }
+  .cta-band::before{
+    content:"";
+    position:absolute; right:-60px; top:-60px;
+    width:220px; height:220px; border-radius:50%;
+    background:rgba(193,80,46,0.12);
+  }
+
+  /* ============ footer ============ */
+  .site-footer{
+    background:var(--ink);
+    color:rgba(251,248,241,.65);
+    padding:3.5rem 0 2rem;
+    font-size:.9rem;
+  }
+  .site-footer a{color:rgba(251,248,241,.65); transition:color .2s ease;}
+  .site-footer a:hover{color:#fff;}
+  .footer-brand{color:#fff; font-family:'Fraunces',serif; font-size:1.2rem; font-weight:600;}
+
+  @media (max-width:767px){
+    .demo-hero{grid-template-columns:1fr;}
+    .cta-band{padding:2.2rem 1.5rem;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="site-nav py-3">
+  <div class="container d-flex align-items-center justify-content-between">
+    <a href="#top" class="d-flex align-items-center gap-2">
+      <span class="brand-mark">H</span>
+      <span class="brand-name">Hopewell</span>
+    </a>
+    <div class="d-none d-lg-flex align-items-center gap-4">
+      <a href="#features" class="nav-link-hope">Features</a>
+      <a href="#styles" class="nav-link-hope">Styles</a>
+      <a href="#pages" class="nav-link-hope">Pages</a>
+      <a href="#faq" class="nav-link-hope">FAQ</a>
+    </div>
+    <a href="#cta" class="btn-hope">
+      Buy Now — $19 <i class="bi bi-arrow-up-right"></i>
+    </a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero-section" id="top">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5" data-aos="fade-up">
+        <span class="eyebrow">Bootstrap 5 · Charity &amp; Nonprofit Theme</span>
+        <h1 class="hero-title font-display mt-3 mb-4">One theme.<br>Two <em>hearts</em>,<br>your choice.</h1>
+        <p class="hero-sub mb-4">Hopewell is a Bootstrap charity landing page built for fundraising, causes and nonprofits — and it ships with two complete color styles baked in, so you launch with the mood that fits your cause from day one.</p>
+        <div class="d-flex flex-wrap gap-3 mb-4">
+          <a href="#cta" class="btn-hope">Buy Now <i class="bi bi-cart3"></i></a>
+          <a href="#styles" class="btn-hope-outline">Preview Both Styles <i class="bi bi-palette"></i></a>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="spec-chip"><i class="bi bi-bootstrap-fill"></i> Bootstrap 5.3.8</span>
+          <span class="spec-chip"><i class="bi bi-phone"></i> 100% Responsive</span>
+          <span class="spec-chip"><i class="bi bi-code-slash"></i> Easy to Modify</span>
+        </div>
+      </div>
+
+      <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="browser-mock" id="heroMock">
+          <img src="banner.png" style="height: 420px;"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker-strip">
+  <div class="ticker-track">
+    <span><i class="bi bi-check-circle-fill"></i> BOOTSTRAP 5.3.8</span>
+    <span><i class="bi bi-check-circle-fill"></i> 2 COLOR STYLES INCLUDED</span>
+    <span><i class="bi bi-check-circle-fill"></i> FULLY RESPONSIVE</span>
+    <span><i class="bi bi-check-circle-fill"></i> W3C VALIDATED</span>
+    <span><i class="bi bi-check-circle-fill"></i> WELL DOCUMENTED</span>
+    <span><i class="bi bi-check-circle-fill"></i> SEO FRIENDLY</span>
+    <span><i class="bi bi-check-circle-fill"></i> CROSS-BROWSER TESTED</span>
+    <!-- duplicate for seamless loop -->
+    <span><i class="bi bi-check-circle-fill"></i> BOOTSTRAP 5.3.8</span>
+    <span><i class="bi bi-check-circle-fill"></i> 2 COLOR STYLES INCLUDED</span>
+    <span><i class="bi bi-check-circle-fill"></i> FULLY RESPONSIVE</span>
+    <span><i class="bi bi-check-circle-fill"></i> W3C VALIDATED</span>
+    <span><i class="bi bi-check-circle-fill"></i> WELL DOCUMENTED</span>
+    <span><i class="bi bi-check-circle-fill"></i> SEO FRIENDLY</span>
+    <span><i class="bi bi-check-circle-fill"></i> CROSS-BROWSER TESTED</span>
+  </div>
+</div>
+
+<!-- ============ FEATURES ============ -->
+<section class="section-pad" id="features">
+  <div class="container">
+    <div class="section-head mb-5" data-aos="fade-up">
+      <span class="eyebrow">Why Hopewell</span>
+      <h2 class="section-title font-display mt-3">Everything a fundraising site needs, none of the bloat.</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" data-aos="fade-up">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-bootstrap-fill"></i></div>
+          <h3>Built on Bootstrap 5.3.8</h3>
+          <p>Latest stable Bootstrap grid, utilities and components — no jQuery required, no deprecated dependencies.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-phone"></i></div>
+          <h3>Fully Responsive</h3>
+          <p>Every section is tested from 320px phones up to ultra-wide desktops, with no horizontal scroll surprises.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-sliders"></i></div>
+          <h3>Easy to Modify</h3>
+          <p>Colors, type and spacing run through a small set of CSS variables — swap a palette without hunting through files.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-palette2"></i></div>
+          <h3>2 Styles, 1 Purchase</h3>
+          <p>Sunrise and Harbor ship in the same download — pick one per project, or offer both to a client.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-file-earmark-text"></i></div>
+          <h3>Well Documented</h3>
+          <p>A plain-language setup guide walks through structure, customization and deployment, start to finish.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-lightning-charge"></i></div>
+          <h3>Fast Loading</h3>
+          <p>Lean markup and optimized assets keep Lighthouse scores high, even on the donation and events pages.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TWO STYLE BOXES ============ -->
+<section class="section-pad style-band" id="styles">
+  <div class="container">
+    <div class="section-head mb-5" data-aos="fade-up">
+      <span class="eyebrow">Two Boxes, Two Moods</span>
+      <h2 class="section-title font-display mt-3">Pick the style that matches your cause.</h2>
+      <p class="section-lead mt-3 mb-0">Both styles share the exact same layout and components — only the palette and mood change. Preview either one below.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Sunrise box -->
+      <div class="col-lg-6" data-aos="fade-up">
+        <div class="style-card">
+          <div class="browser-mock" style="--demo-primary:#E8792C; --demo-primary-deep:#C85E19; --demo-secondary:#F4A93B; --demo-bg:#FFF8EE; --demo-surface:#FFFFFF; --demo-text:#2B1B12; --demo-text-soft:#7A5E4C;">
+         
+            <div class="demo-body">
+              <img src="style1.png" style="height: 310px;"/>
+            </div>
+          </div>
+          <span class="style-tag">Style One</span>
+
+          <a href="index.html" target="_blank" class="btn-preview" data-set-theme="sunrise">
+            <i class="bi bi-eye"></i> Preview 
+          </a>
+        </div>
+      </div>
+
+      <!-- Harbor box -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="style-card">
+          <div class="browser-mock" style="--demo-primary:#1C6E6A; --demo-primary-deep:#155452; --demo-secondary:#2FA6A0; --demo-bg:#F1F7F6; --demo-surface:#FFFFFF; --demo-text:#10241F; --demo-text-soft:#5C7570;">
+            <div class="browser-chrome">
+             
+            </div>
+             <div class="demo-body">
+              <img src="style2.png" style="height: 310px;"/>
+            </div>
+          </div>
+          <span class="style-tag">Style Two</span>
+          <a href="theme2/index.html" target="_blank" class="btn-preview" data-set-theme="harbor">
+            <i class="bi bi-eye"></i> Preview Harbor Above
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PAGES INCLUDED ============ -->
+<section class="section-pad" id="pages">
+  <div class="container">
+    <div class="section-head mb-5" data-aos="fade-up">
+      <span class="eyebrow">In The Download</span>
+      <h2 class="section-title font-display mt-3">Every page a fundraising site needs.</h2>
+    </div>
+    <div class="row g-3">
+      <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up">
+        <div class="page-pill"><i class="bi bi-house-heart"></i> Home — Sunrise</div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="40">
+        <div class="page-pill"><i class="bi bi-house-heart-fill"></i> Home — Harbor</div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="80">
+        <div class="page-pill"><i class="bi bi-info-circle"></i> Financial Reports</div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="120">
+        <div class="page-pill"><i class="bi bi-heart"></i> Privacy Policy</div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up">
+        <div class="page-pill"><i class="bi bi-cash-coin"></i> Terms Of Service</div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="40">
+        <div class="page-pill"><i class="bi bi-calendar-event"></i> FAQs</div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="80">
+        <div class="page-pill"><i class="bi bi-people"></i> Blog</div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="120">
+        <div class="page-pill"><i class="bi bi-envelope"></i> Blog Post</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section-pad pt-0" id="cta">
+  <div class="container">
+    <div class="cta-band" data-aos="fade-up">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <span class="eyebrow">Ready When You Are</span>
+          <h2 class="section-title font-display mt-3 mb-2">Launch your cause with Hopewell today.</h2>
+          <p class="mb-0" style="color:var(--ink-soft); max-width:32rem;">One license, two complete styles, lifetime updates and full documentation included.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a href="#" class="btn-hope"><i class="bi bi-cart3"></i> Buy Now — $19</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" id="faq">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <span class="brand-mark">H</span>
+          <span class="footer-brand">Hopewell</span>
+        </div>
+        <p class="mb-0">A Bootstrap 5 charity landing page theme with two built-in color styles, made for nonprofits and fundraising teams.</p>
+      </div>
+      <div class="col-lg-2 col-6">
+        <div class="footer-brand mb-3" style="font-size:.95rem;">Theme</div>
+        <p class="mb-2"><a href="#features">Features</a></p>
+        <p class="mb-2"><a href="#styles">Styles</a></p>
+        <p class="mb-0"><a href="#pages">Pages</a></p>
+      </div>
+      <div class="col-lg-2 col-6">
+        <div class="footer-brand mb-3" style="font-size:.95rem;">Support</div>
+        <p class="mb-2"><a href="#">Documentation</a></p>
+        <p class="mb-2"><a href="#">Changelog</a></p>
+        <p class="mb-0"><a href="#">Contact</a></p>
+      </div>
+      <div class="col-lg-4">
+        <div class="footer-brand mb-3" style="font-size:.95rem;">Spec Sheet</div>
+        <p class="mb-1 font-mono" style="font-size:.8rem;">Bootstrap ....... 5.3.8</p>
+        <p class="mb-1 font-mono" style="font-size:.8rem;">Styles included .. 2</p>
+        <p class="mb-1 font-mono" style="font-size:.8rem;">Pages ............ 8</p>
+        <p class="mb-0 font-mono" style="font-size:.8rem;">Last update ...... 2026</p>
+      </div>
+    </div>
+    <hr class="my-4" style="border-color:rgba(251,248,241,.12);">
+    <div class="d-flex flex-wrap justify-content-between gap-2">
+      <span>© 2026 Hopewell. All rights reserved by <a href="https://www.templatemonster.com/authors/k29solutions/" target="_blank" rel="noopener noreferrer">K29Solutions</a>.</span>
+      <span>Licensed for commercial use.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ once:true, duration:650, easing:'ease-out-cubic' });
+
+  const themes = {
+    sunrise:{ primary:'#E8792C', deep:'#C85E19', secondary:'#F4A93B', bg:'#FFF8EE', surface:'#FFFFFF', text:'#2B1B12', textSoft:'#7A5E4C' },
+    harbor:{ primary:'#1C6E6A', deep:'#155452', secondary:'#2FA6A0', bg:'#F1F7F6', surface:'#FFFFFF', text:'#10241F', textSoft:'#5C7570' }
+  };
+
+  const root = document.documentElement;
+  const switcher = document.getElementById('heroSwitcher');
+  const switchButtons = switcher.querySelectorAll('button');
+
+  function applyTheme(name){
+    const t = themes[name];
+    root.style.setProperty('--demo-primary', t.primary);
+    root.style.setProperty('--demo-primary-deep', t.deep);
+    root.style.setProperty('--demo-secondary', t.secondary);
+    root.style.setProperty('--demo-bg', t.bg);
+    root.style.setProperty('--demo-surface', t.surface);
+    root.style.setProperty('--demo-text', t.text);
+    root.style.setProperty('--demo-text-soft', t.textSoft);
+
+    switcher.classList.toggle('state-harbor', name === 'harbor');
+    switchButtons.forEach(b => b.classList.toggle('active', b.dataset.theme === name));
+  }
+
+  switchButtons.forEach(btn => {
+    btn.addEventListener('click', () => applyTheme(btn.dataset.theme));
+  });
+
+  document.querySelectorAll('[data-set-theme]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      applyTheme(btn.dataset.setTheme);
+      document.getElementById('top').scrollIntoView({ behavior:'smooth' });
+    });
+  });
+</script>
+</body>
+</html>
